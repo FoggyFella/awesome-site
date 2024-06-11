@@ -1,7 +1,6 @@
 body{
     height: 100vh;
     background: linear-gradient(#26547c,#ef476f);
-    overflow: hidden;
     position: relative;
 }
 
@@ -9,8 +8,8 @@ body{
     background-image: url("/assets/images/tiles.svg");
     background-size: 10%;  
     position: absolute;
-    left: 50%;
-    top: 5px;
+    left: 00%;
+    top: 50;
     translate: -50% 0%;
     z-index: 1;
     height: 100%;
