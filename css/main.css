@@ -1,12 +1,13 @@
 body{
     height: 100vh;
-    background: linear-gradient(#26547c,#ef476f);
+    background: linear-gradient(#ef476f,#26547c);
     position: relative;
+    overflow: hidden;
 }
 
 #star-pattern {
     background-image: url("tiles.svg");
-    background-size: 10%;  
+    background-size: 10%;
     position: absolute;
     left: 50%;
     top: 50;
