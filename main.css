@@ -1,7 +1,7 @@
 body{
     background: linear-gradient(#db1147 70%,#fcfcfc);
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     font-family: Fredoka,sans-serif;
     font-size: large;
 }
@@ -49,6 +49,8 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: -10px;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 p {
