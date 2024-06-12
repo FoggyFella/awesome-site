@@ -44,11 +44,73 @@ body{
 #mainstuff{
     background-color: rgb(243, 249, 255);
     width: 50%;
+    height: 100vh;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: -5px;
+    margin-top: -6px;
     z-index: 1;
     outline-color: #ffffff;
     outline-width: 10px;
     outline-style: groove;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: -10px;
+}
+
+.rightAlign {
+    text-align: right;
+    margin-right: 10px;
+    margin-left: auto;
+
+}
+
+h1{
+    color: #000000;
+}
+
+h2{
+    color: #3a3a3a;
+    transform: rotate(-2deg)
+}
+
+.wavyText{
+    animation: waveanim 5s infinite linear;
+}
+
+.waveawesome{
+    transform: translateY(10px);
+}
+
+.waveawesome .char{
+    animation: test 2s ease-in-out infinite;
+    transform: translateY(-10em);
+    animation-delay: calc(0.05s * var(--char-index));
+}
+
+@keyframes test{
+    0%,100%{
+        transform: translateY(-0.2em) rotate(-5deg);
+    }
+
+    50%{
+        transform: translateY(0.2em) rotate(5deg);
+    }
+}
+
+@keyframes waveanim{
+    25% {
+        transform: rotate(1.5deg);
+      }
+    
+    50%{
+        transform: rotate(0.0deg);
+    }
+    
+    75% {
+        transform: rotate(-1.5deg);
+    }
+
+    100%{
+        transform: rotate(0.0deg);
+    }
 }
