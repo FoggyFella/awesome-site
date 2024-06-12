@@ -39,7 +39,6 @@ body{
 #mainstuff{
     background-color: rgb(243, 249, 255);
     width: 50%;
-    height: 100vh;
     margin-left: 25%;
     margin-right: 25%;
     margin-top: -6px;
@@ -60,6 +59,8 @@ a{
     color: #5190fc;
     text-decoration-style:wavy; 
     font-size: 20px;
+    transform: scale(1.0);
+    transition: all 0.5s;
 }
 
 .rightAlign {
@@ -100,7 +101,8 @@ b{
 }
 
 .wavyText{
-    animation: waveanim 5s infinite linear;
+    animation: waveanim 5s infinite ease;
+    font-size: 20px;
 }
 
 .waveawesome{
@@ -112,6 +114,64 @@ b{
     animation: test 2s ease-in-out infinite;
     transform: translateY(-10em);
     animation-delay: calc(0.05s * var(--char-index));
+}
+
+.gamesContainer{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+
+    padding-top: 5px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.gamebox{
+    vertical-align: top;
+    padding: 4px;
+    margin-left: 1px;
+    margin-right: 1px;
+    height: calc(100% - 29px);
+    width: 220px;
+    display: inline-block;
+}
+
+a img.thumbanail {
+    max-width: 180px;
+    border-radius: 25px;
+    border-style: dashed; 
+    border-color: #fa2f68;
+
+    padding: 4px;
+    transition: all 0.5s;
+}
+
+a img.thumbanail:hover {
+    transform: scale(1.1) rotate(-1deg);
+    box-shadow: 2px 3px 1px 1px #bd1a48;
+    animation: thumbanim 3s infinite ease;
+    transition: all 0.5;
+}
+
+.gameName{
+    font-weight: bold;
+    transform: translateY(-10px);
+    margin-bottom: 10px;
+}
+
+.gameDesc{
+    transform: translateY(-30px);
+}
+
+@keyframes thumbanim {
+    0%,100%{
+        transform: scale(1.1) rotate(-1deg) translateY(3px);
+    }
+
+    50%{
+        transform: scale(1.1) rotate(1deg) translateY(-1px);
+    }
 }
 
 @keyframes test{
