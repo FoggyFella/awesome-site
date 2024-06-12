@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(#db1147 70%,#fcfcfc);
+    background: linear-gradient(#8011db 70%,#34084f);
     position: relative;
     overflow: auto;
     font-family: Fredoka,sans-serif;
@@ -13,7 +13,7 @@ body{
 }
 
 #tile-pattern {
-    background-image: url("assets/images/tiles.svg");
+    background-image: url("mails.svg");
     background-size: 10%;
     position: absolute;
     left: 50%;
@@ -76,6 +76,11 @@ mini{
 
 h1{
     color: #000000;
+}
+
+h4{
+    color: #00000052;
+    transform: translateY(-20px);
 }
 
 em{
