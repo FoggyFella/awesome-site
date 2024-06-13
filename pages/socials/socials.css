@@ -1,158 +1,35 @@
 body{
-    background: linear-gradient(#8011db 70%,#34084f);
-    position: relative;
-    overflow: auto;
-    font-family: Fredoka,sans-serif;
-    font-size: large;
+    background-color: black;
+    font-family: "Fredoka";
+    overflow: hidden;
 }
 
-#tile-container{
-    height: 100%;
-    display: inline;
-    width: 100%;
-}
-
-#tile-pattern {
-    background-image: url("mails.svg");
-    background-size: 10%;
-    position: absolute;
-    left: 50%;
-    translate: -50% 0%;
-    z-index: -2;
-    height: 100%;
-    width: 100%;
-    min-width: 1200px;
-    opacity: 10%;
-    animation: pan 180s linear infinite;
-    will-change: background-position;
-}
-
-@keyframes pan{
-    0% {
-        background-position: 0% 0%;
-      }
-      100% {
-        background-position: 100% 0%;
-      }
-}
-
-#mainstuff{
-    background-color: rgb(243, 249, 255);
-    width: 50%;
-    height: 100vh;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: -6px;
-    z-index: 1;
-    outline-color: #ffffff;
-    outline-width: 10px;
-    outline-style: groove;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: -10px;
-}
-
-p {
-    padding-bottom:10px;
-}
-
-a{
-    color: #5190fc;
-    text-decoration-style:wavy; 
-    font-size: 20px;
-}
-
-.rightAlign {
-    text-align: right;
-    margin-right: 10px;
-    margin-left: auto;
-
-}
-
-mini{
-    color: #7d7d7e;
-    font-size: 12px;
-}
-
-h1{
-    color: #000000;
+.announcement{
+    color: rgb(255, 255, 255);
+    line-height: 3px;
 }
 
 h4{
-    color: #00000052;
-    transform: translateY(-20px);
+    color: rgb(197, 197, 197);
+    font-weight: lighter;
 }
 
-em{
-    position: relative;
-    color: #fa2f68;
+.card{
+    width: 35%;
+    height: 85%;
+    background-color: aliceblue;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-h2{
-    color: #3a3a3a;
-    transform: rotate(-2deg);
-    text-shadow: 2px 2px #c4c4c4;
-}
-
-b{
-    color: #393c50;
-}
-
-.anotherOne{
-    color: #3a3a3a;
-    transform: rotate(1deg) translate(0px,0px);
-    text-shadow: 2px 2px #c4c4c4;
-}
-
-.wavyText{
-    animation: waveanim 5s infinite linear;
-}
-
-.waveawesome{
-    transform: translateY(10px);
-    text-shadow: 0px 2px 1px #5d5d5d;
-}
-
-.waveawesome .char{
-    animation: test 2s ease-in-out infinite;
-    transform: translateY(-10em);
-    animation-delay: calc(0.05s * var(--char-index));
-}
-
-@keyframes test{
-    0%,100%{
-        transform: translateY(-0.2em) rotate(-5deg);
-        color: #ff5b5b;
-    }
-
-    25%{
-        color: #ffff5b;
-    }
-
-    50%{
-        transform: translateY(0.2em) rotate(5deg);
-        color: #5190fc;
-    }
-
-    75%{
-        color: #c800ff;
-    }
-}
-
-@keyframes waveanim{
-    25% {
-        transform: rotate(1.5deg);
-      }
-    
-    50%{
-        transform: rotate(0.0deg);
-    }
-    
-    75% {
-        transform: rotate(-1.5deg);
-    }
-
-    100%{
-        transform: rotate(0.0deg);
+@media screen and (max-width: 600px) {
+    .card{
+        width: 80%;
+        height: 80%;
+        top: 55%;
     }
 }
