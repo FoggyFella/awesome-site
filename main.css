@@ -52,17 +52,6 @@ body{
     overflow-y: auto;
 }
 
-@media screen and (max-width: 800px){
-    #mainstuff{
-        width: 80vw;
-        margin-left: 8.5vw;
-        margin-right: 10vw;
-        padding-left: 0px;
-        padding-right: 0px;
-        overflow-y: auto;
-    }
-}
-
 p {
     padding-bottom:10px;
 }
@@ -118,8 +107,9 @@ b{
 }
 
 .waveawesome{
-    transform: translateY(10px);
+    transform: translateY(-1vw);
     text-shadow: 0px 2px 1px #5d5d5d;
+    display: inline-block;
 }
 
 .waveawesome .char{
@@ -128,12 +118,17 @@ b{
     animation-delay: calc(0.05s * var(--char-index));
 }
 
+.waveawesomeSmall{
+    display: none;
+    transform: translateY(-1vw);
+    text-shadow: 0px 2px 1px #5d5d5d;
+}
+
 .gamesContainer{
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
     text-align: center;
-
     padding-top: 5px;
     margin: auto;
     max-width: 100%;
@@ -174,6 +169,63 @@ a img.thumbanail:hover {
 
 .gameDesc{
     transform: translateY(-30px);
+}
+
+@media screen and (max-width: 800px){
+    #mainstuff{
+        width: 80vw;
+        margin-left: 8.5vw;
+        margin-right: 10vw;
+        padding-left: 0px;
+        padding-right: 0px;
+        overflow-y: auto;
+    }
+
+    .waveawesomeSmall .char{
+        color: #272e689a;
+        transform: translateY(0em);
+        animation: changingcolors 3s infinite ease-in-out;
+        animation-delay: calc(0.1s * var(--char-index));
+    }
+
+    .waveawesomeSmall{
+        font-size: 20px;
+        display: inline-block;
+        transform: translateY(-1vw);
+        text-shadow: 0px 2px 1px #5d5d5d;
+    }
+
+    .waveawesome{
+        transform: translateY(-1vw);
+        text-shadow: 0px 2px 1px #5d5d5d;
+        display: none;
+    }
+
+    .wavyText{
+        animation: none;
+        font-size: 20px;
+    }
+
+
+}
+
+
+@keyframes changingcolors{
+    0%,100%{
+        color: #ff5b5b;
+    }
+
+    25%{
+        color: #ffff5b;
+    }
+
+    50%{
+        color: #5190fc;
+    }
+
+    75%{
+        color: #c800ff;
+    }
 }
 
 @keyframes thumbanim {
