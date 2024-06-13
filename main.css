@@ -189,7 +189,7 @@ a img.thumbanail:hover {
     }
 
     .waveawesomeSmall{
-        font-size: 20px;
+        font-size: 23px;
         display: inline-block;
         transform: translateY(-1vw);
         text-shadow: 0px 2px 1px #5d5d5d;
@@ -204,7 +204,7 @@ a img.thumbanail:hover {
     .wavyText{
         animation: none;
         font-size: 20px;
-    }
+    
 
 
 }
