@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(#db1147 70%,#fcfcfc);
+    background: linear-gradient(#9a28f8 70%,#000000);
     position: relative;
     overflow: hidden;
     font-family: Fredoka,sans-serif;
@@ -13,7 +13,7 @@ body{
 }
 
 #tile-pattern {
-    background-image: url("assets/images/tiles.svg");
+    background-image: url("assets/images/test.svg");
     background-size: 10%;
     position: absolute;
     left: 50%;
@@ -31,7 +31,7 @@ body{
         background-position: 0% 0%;
       }
       100% {
-        background-position: 100% 0%;
+        background-position: -100% 0%;
       }
 }
 
@@ -97,8 +97,9 @@ b{
 
 .anotherOne{
     color: #3a3a3a;
-    transform: rotate(1deg) translate(0px,0px);
+    transform: rotate(1deg);
     text-shadow: 2px 2px #c4c4c4;
+    margin-bottom: -10px;
 }
 
 .wavyText{
@@ -107,8 +108,9 @@ b{
 }
 
 .waveawesome{
-    font-size: 22px;
+    transform: translateY(0.0vw);
     text-shadow: 0px 2px 1px #5d5d5d;
+    font-size: 22px;
     display: inline-block;
 }
 
