@@ -4,6 +4,8 @@ body{
     overflow: hidden;
     font-family: Fredoka,sans-serif;
     font-size: large;
+    border: #00000066 10px;
+    border-style: dashed;
 }
 
 #tile-container{
@@ -60,8 +62,6 @@ a{
     color: #fd3a54;
     text-decoration-style:wavy; 
     font-size: 20px;
-    transform: scale(1.0);
-    transition: all 0.5s;
 }
 
 .rightAlign {
@@ -126,47 +126,71 @@ b{
     text-shadow: 0px 2px 1px #5d5d5d;
 }
 
-.gamesContainer{
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    text-align: center;
-    padding-top: 5px;
-    margin: auto;
-    max-width: 100%;
-}
 
-.gamebox{
-    vertical-align: top;
-    padding: 4px;
-    margin-left: 1px;
-    margin-right: 1px;
-    height: calc(100% - 29px);
-    width: 220px;
-    display: inline-block;
-}
-
-a img.thumbanail {
-    max-width: 180px;
-    border-radius: 25px;
-    border-style: dashed; 
-    border-color: #fa2f68;
-
-    padding: 4px;
-    transition: all 0.5s;
-}
-
-.SocialThing{
+.BlueSocialThing{
     margin-top: 20px;
     padding-top: 10px;
     background-color: #4e89ff2e;
+    border-top: #bd1a48 0px;
+    border-right: #bd1a48 0px;
+    border-left: #bd1a48 0px;
+    border-bottom: #3980fc 5px;
+    border-style: solid;
+    height: fit-content;
+}
+
+.OrangeSocialThing{
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: #fec8332e;
+    border-top: #bd1a48 0px;
+    border-right: #bd1a48 0px;
+    border-left: #bd1a48 0px;
+    border-bottom: #fd8a2d 5px;
+    border-style: solid;
+    height: fit-content;
+}
+
+.RedSocialThing{
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: #fe337d2e;
+    border-top: #bd1a48 0px;
+    border-right: #bd1a48 0px;
+    border-left: #bd1a48 0px;
+    border-bottom: #fa2222 5px;
+    border-style: solid;
+    height: fit-content;
+}
+
+.GreenSocialThing{
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: #33fea32e;
+    border-top: #bd1a48 0px;
+    border-right: #bd1a48 0px;
+    border-left: #bd1a48 0px;
+    border-bottom: #22fa83 5px;
+    border-style: solid;
+    height: fit-content;
+}
+
+.SocialThing a:hover{
+    color: #ff117c;
 }
 
 .SocialIcon{
     padding-left: 10px;
+    padding-right: 5px;
     width: 20px;
     max-width: 180px;
-    transform: translateY(5px);
+    transform: scale(1.1) translateY(3.5px);;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: pixelated;
 }
 
 .SocialName{
@@ -175,15 +199,14 @@ a img.thumbanail {
     font-weight: bold;
     line-height: 1px;
     margin-bottom: -10px;
+    color: #1b2137;
+    text-shadow: 2px 1px #1c1e463e;
 }
 
 .SocialDesc{
     padding-left: 10px;
-    border-top: #bd1a48 0px;
-    border-right: #bd1a48 0px;
-    border-left: #bd1a48 0px;
-    border-bottom: #3980fc 5px;
-    border-style: solid;
+    padding-right: 8px;
+    margin-bottom: -3px;
 }
 
 a img.thumbanail:hover {
@@ -211,6 +234,15 @@ a img.thumbanail:hover {
         padding-left: 0px;
         padding-right: 0px;
         overflow-y: auto;
+    }
+
+    
+    #tile-pattern {
+        background-size: 30%;
+        left: 50%;
+        translate: -50% 0%;
+        height: 100%;
+        width: 100%;
     }
 
     .waveawesomeSmall .char{

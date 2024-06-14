@@ -4,6 +4,8 @@ body{
     overflow: hidden;
     font-family: Fredoka,sans-serif;
     font-size: large;
+    border: #ffffff4d 10px;
+    border-style: dashed;
 }
 
 #tile-container{
