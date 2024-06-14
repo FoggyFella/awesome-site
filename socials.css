@@ -270,6 +270,10 @@ a img.thumbanail:hover {
         font-size: 20px;
     }
 
+    body{
+        border: #00000066 0px;
+        border-style: dashed;
+    }
 
 }
 
