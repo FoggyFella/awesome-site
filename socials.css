@@ -57,7 +57,7 @@ p {
 }
 
 a{
-    color: #5190fc;
+    color: #fd3a54;
     text-decoration-style:wavy; 
     font-size: 20px;
     transform: scale(1.0);
@@ -154,6 +154,36 @@ a img.thumbanail {
 
     padding: 4px;
     transition: all 0.5s;
+}
+
+.SocialThing{
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: #4e89ff2e;
+}
+
+.SocialIcon{
+    padding-left: 10px;
+    width: 20px;
+    max-width: 180px;
+    transform: translateY(5px);
+}
+
+.SocialName{
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1px;
+    margin-bottom: -10px;
+}
+
+.SocialDesc{
+    padding-left: 10px;
+    border-top: #bd1a48 0px;
+    border-right: #bd1a48 0px;
+    border-left: #bd1a48 0px;
+    border-bottom: #3980fc 5px;
+    border-style: solid;
 }
 
 a img.thumbanail:hover {
