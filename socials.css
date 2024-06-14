@@ -272,7 +272,7 @@ a img.thumbanail:hover {
 
     body{
         border: #00000066 0px;
-        border-style: dashed;
+        border-style: none;
     }
 
 }
