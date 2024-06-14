@@ -51,17 +51,47 @@ body{
     padding-right: 10px;
     padding-top: -10px;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
+}
+
+.navbar ul{
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+    text-align: center;
+    background-color: #a895ff35;
+    border-radius: 10px;
+    box-shadow: #1e178b41 0px 3px;
+    scale: 1.05;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 15px;
+    font-size: 19px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.5s;
+    color: #1a1a45;
+}
+
+.navbar a:hover{
+    background-color: #80bfff47;
+    color: #1a1a45;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.navbar li{
+    display: inline-block;
 }
 
 p {
     padding-bottom:10px;
-}
-
-a{
-    color: #fd3a54;
-    text-decoration-style:wavy; 
-    font-size: 20px;
 }
 
 .rightAlign {
@@ -130,6 +160,7 @@ b{
 .BlueSocialThing{
     margin-top: 20px;
     padding-top: 10px;
+    margin-bottom: 25px;
     background-color: #4e89ff2e;
     border-top: #bd1a48 0px;
     border-right: #bd1a48 0px;
@@ -142,6 +173,7 @@ b{
 .OrangeSocialThing{
     margin-top: 20px;
     padding-top: 10px;
+    margin-bottom: 25px;
     background-color: #fec8332e;
     border-top: #bd1a48 0px;
     border-right: #bd1a48 0px;
@@ -154,6 +186,7 @@ b{
 .RedSocialThing{
     margin-top: 20px;
     padding-top: 10px;
+    margin-bottom: 25px;
     background-color: #fe337d2e;
     border-top: #bd1a48 0px;
     border-right: #bd1a48 0px;
@@ -161,6 +194,19 @@ b{
     border-bottom: #fa2222 5px;
     border-style: solid;
     height: fit-content;
+}
+
+.SocialLink{
+    color: #fd3a54;
+    text-decoration-style:wavy; 
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.SocialLink:hover{
+    font-weight: bold;
+    background-color: #ffffff85;
+    border-radius: 10px;
 }
 
 .GreenSocialThing{
