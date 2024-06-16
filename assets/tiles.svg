@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+	<title>New Project</title>
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: #7d7d7d } 
+	</style>
+	<path id="Shape 1" class="s0" d="m0 0h250v250h-250zm250 250h250v250h-250z"/>
+	<path id="Shape 1 copy" class="s1" d="m250 0h250v250h-250zm-250 250h250v250h-250z"/>
+</svg>
