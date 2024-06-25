@@ -29,12 +29,6 @@ function writenames(names){
 
         const mything = document.createElement("p")
         mything.style.color = color
-        if (plus){
-            mything.style.transform = 'rotate('+String(Math.random()*30)+')';
-        }
-        else{
-            mything.style.transform = 'rotate('+String(Math.random()*-30)+')';
-        }
         const node = document.createTextNode(name);
         mything.appendChild(node)
         setProperty(mything,"--charindex",the_id)
