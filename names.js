@@ -21,6 +21,7 @@ function writenames(names){
         const color = userdata["color"]
 
         const mything = document.createElement("p")
+        mything.style.color = color
         const node = document.createTextNode(name);
         mything.appendChild(node)
 
