@@ -15,12 +15,17 @@ async function fetchData(){
 
 function writenames(names){
     const container = document.getElementById("namecontainer");
+    var names = []
     var the_id = 0
     var plus = true
     for (user in names){
         const userdata  = names[user]
         const name = userdata["name"]
         const color = userdata["color"]
+
+        if (!names.includes(name)){
+            return
+        }
 
         const mything = document.createElement("p")
         mything.style.color = color
@@ -36,6 +41,7 @@ function writenames(names){
 
         container.appendChild(mything)
         the_id += 1
+        names.push(name)
         plus = !plus
 
     }
