@@ -14,7 +14,7 @@ async function fetchData(){
 }
 
 function writenames(names){
-    const container = document.getElementById("div1");
+    const container = document.getElementById("namecontainer");
     for (user in names){
         const userdata  = names[user]
         const name = userdata["name"]
