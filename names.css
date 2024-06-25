@@ -162,7 +162,7 @@ h1{
 }
 
 .namecontainer p{
-    animation: appeartext 2s ease-in-out;
+    animation: appeartext 1s ease-out;
     opacity: 0;
     animation-delay: calc(0.5s * var(--charindex));
     animation-fill-mode: forwards;
@@ -170,13 +170,18 @@ h1{
 
 @keyframes appeartext {
     0%{
-        transform: translateY(10px);
+        transform: translateY(10px) scale(0) rotateY(180deg);
         opacity: 0;
+    }
+
+    80%{
+        transform: translateY(0px) scale(1.2) rotateY(0deg);
+        opacity: 1;
     }
 
     100%{
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0px) scale(1.0);
     }
 }
 
