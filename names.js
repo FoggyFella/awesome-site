@@ -23,7 +23,7 @@ function writenames(names){
         const name = userdata["name"]
         const color = userdata["color"]
 
-        if (!names.includes(name)){
+        if (names.includes(name)){
             return
         }
 
