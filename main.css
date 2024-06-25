@@ -243,6 +243,10 @@ a img.thumbanail:hover {
     transform: translateY(-30px);
 }
 
+marquee{
+    color: red;
+}
+
 @media screen and (max-width: 800px){
     #mainstuff{
         width: 80vw;

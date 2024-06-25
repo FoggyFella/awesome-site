@@ -26,7 +26,7 @@
 }
 
 body{
-    background: linear-gradient(#db1147 70%,#fcfcfc);
+    background: linear-gradient(#f5ff6c 70%,#ffffff);
     position: relative;
     overflow: hidden;
     font-family: Fredoka,sans-serif;
@@ -154,7 +154,7 @@ body{
 
 #tile-pattern {
     background-color: #006eff27;
-    background-image: url("assets/tiles.svg");
+    background-image: url("assets/name.svg");
     background-blend-mode:multiply;
     background-size: 10%;
     position: absolute;
