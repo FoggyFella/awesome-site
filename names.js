@@ -23,10 +23,6 @@ function writenames(names){
         const name = userdata["name"]
         const color = userdata["color"]
 
-        if (names.includes(name)){
-            return
-        }
-
         const mything = document.createElement("p")
         mything.style.color = color
         if (plus){
@@ -38,6 +34,10 @@ function writenames(names){
         const node = document.createTextNode(name);
         mything.appendChild(node)
         setProperty(mything,"--charindex",the_id)
+        
+        if (names.includes(name)){
+            mything.remove()
+        }
 
         container.appendChild(mything)
         the_id += 1
