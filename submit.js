@@ -14,6 +14,7 @@ async function submitAll(){
     if (nameallowed){
         await make_post_request(username,selected_color)
         alert("Succesfully submitted!")
+        window.location.replace("https://foggydude.dev/names");
     }
 }
 
