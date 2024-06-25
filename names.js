@@ -8,7 +8,7 @@ async function fetchData(){
     const stuff = await response.text();
 
     console.log(stuff)
-    const test = JSON.parse(stuff)
+    const test = await JSON.parse(stuff)
     console.log(test[0])
     //ResultsThing.textContent = stuff;
 }
