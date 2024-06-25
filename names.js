@@ -9,5 +9,13 @@ async function fetchData(){
     const stuff = await response.json();
 
     console.log(stuff["results"])
+    writenames(stuff["results"])
     //ResultsThing.textContent = stuff;
+}
+
+function writenames(names){
+    for (user in names){
+        console.log(user["name"])
+        console.log(user["color"])
+    }
 }
