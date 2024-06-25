@@ -24,7 +24,7 @@ function writenames(names){
         const color = userdata["color"]
 
         if (unique_names.includes(name)){
-            return
+            continue
         }
 
         const mything = document.createElement("p")
