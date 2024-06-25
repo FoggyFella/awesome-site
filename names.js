@@ -7,7 +7,7 @@ async function fetchData(){
     console.log(IdThing.con)
     const response = await fetch("https://mypythonworker.hrimar321.workers.dev");
     IdThing.remove();
-    const stuff = await response.json();
+    const stuff = await response.text();
     console.log(stuff)
     //ResultsThing.textContent = stuff;
 }
