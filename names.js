@@ -15,6 +15,7 @@ async function fetchData(){
 
 function writenames(names){
     const container = document.getElementById("namecontainer");
+    var the_id = 0
     for (user in names){
         const userdata  = names[user]
         const name = userdata["name"]
@@ -24,8 +25,14 @@ function writenames(names){
         mything.style.color = color
         const node = document.createTextNode(name);
         mything.appendChild(node)
+        setProperty(mything,"--charindex",the_id)
 
         container.appendChild(mything)
+        the_id += 1
 
     }
 }
+
+function setProperty(el, varName, value) {
+    el.style.setProperty(varName, value);
+} 
