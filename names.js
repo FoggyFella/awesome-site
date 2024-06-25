@@ -14,10 +14,17 @@ async function fetchData(){
 }
 
 function writenames(names){
+    const container = document.getElementById("div1");
     for (user in names){
         const userdata  = names[user]
         const name = userdata["name"]
         const color = userdata["color"]
-        console.log(name, color)
+
+        const mything = document.createElement("p")
+        const node = document.createTextNode(name);
+        mything.appendChild(node)
+
+        container.appendChild(mything)
+
     }
 }
