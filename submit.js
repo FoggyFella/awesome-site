@@ -27,7 +27,7 @@ function checkName(the_name){
         }
         else
         {
-        alert('Please input alphabet characters only');
+        alert('Please input alphabet characters only WITHOUT SPACES');
         return false;
         }
     }
