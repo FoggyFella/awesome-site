@@ -1,4 +1,5 @@
 async function fetchData(){
+
     const IdThing = document.getElementById("loading");
     const ResultsThing = document.getElementById("results");
 
@@ -7,8 +8,6 @@ async function fetchData(){
     IdThing.remove();
     const stuff = await response.text();
 
-    console.log(stuff)
-    const test = await JSON.parse(stuff)
-    console.log(test[0])
+    console.log(stuff[0])
     //ResultsThing.textContent = stuff;
 }
