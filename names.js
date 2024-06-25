@@ -15,6 +15,9 @@ async function fetchData(){
 
 function writenames(names){
     for (user in names){
-        console.log(user)
+        const userdata  = names[user]
+        const name = userdata["name"]
+        const color = userdata["color"]
+        console.log(name, color)
     }
 }
