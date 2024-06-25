@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+
+    <meta content="Your Names" property="og:title">
+    <meta content="You can leave your name here" property="og:description">
+    <meta content="https://awesome-site.pages.dev/names" property="og:url">
+    <meta content="https://awesome-site.pages.dev/assets/images/hog.jpg" property="og:image">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoggyDude Home!</title>
+    <link rel="stylesheet" href="submit.css">
+    <link rel="stylesheet" href="splitting/splitting.css">
+    <script src="splitting/splitting.js"></script>
+    <script src="submit.js"></script>
+</head>
+<body>
+    <div id="tile-container">
+        <div id="tile-pattern"></div>
+        <div id="gradient-overlay"></div>
+    </div>
+    <div id="mainstuff">
+        <nav class="navbar">
+            <center><img src="assets/LogoLettersRender.png" alt="my log o"></center>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="socials.html">Contacts</a></li>
+                <li><a href="cool.html">Cool Stuff</a></li>
+            </ul>
+        </nav>  
+
+        <center><div class="waveawesomeSmall" data-splitting><h1>! Submit your name !</h1></div></center>
+        <center><div class="waveawesome" data-splitting><h1>! Submit your own name !</h1></div></center>
+
+        <div class="inputstuff">
+            <center><p class="formheading">Your username:</p></center>
+            <center><input maxlength="16" class="nameInput" type="text" id="uname"><br><br></center>
+            <center><p class="formheading">Your color:</p></center>
+            <ul>
+            <li><button onmousedown="pressedcolor('#ed2450','red')" type="button" class="colorbutton" style="background-color: #ed2450;"></button><br><br></li>
+            <li><button onmousedown="pressedcolor('#3178ea','blue')" type="button" class="colorbutton" style="background-color: #3178ea;"></button><br><br></li>
+             <li><button onmousedown="pressedcolor('#fafa4b','yellow')" type="button" class="colorbutton" style="background-color: #fafa4b;"></button><br><br></li>
+            <li><button onmousedown="pressedcolor('#40f685','green')" type="button" class="colorbutton" style="background-color: #40f685;"></button><br><br></li>
+            <li><button onmousedown="pressedcolor('#bd4bed','purple')" type="button" class="colorbutton" style="background-color: #bd4bed;"></button><br><br></li>
+            </ul>
+            <center><p id="selectedcolor" class="colortext">Selected color is red</p></center>
+
+            <center><button onmousedown="submitAll()" type="button" class="submitShit">Submit your stuff!</button><br><br></center>
+        </div>
+    
+    </div>
+
+    <script>Splitting();</script>
+</body>
+</html>
