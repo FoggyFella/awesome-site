@@ -8,6 +8,6 @@ async function fetchData(){
     IdThing.remove();
     const stuff = await response.json();
 
-    console.log(stuff[0])
+    console.log(stuff["results"])
     //ResultsThing.textContent = stuff;
 }
