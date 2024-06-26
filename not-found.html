@@ -6,9 +6,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
 
-    <meta content="Your Names" property="og:title">
-    <meta content="This page displays your names!" property="og:description">
-    <meta content="https://awesome-site.pages.dev/names" property="og:url">
+
+    <meta content="Not Found" property="og:title">
+    <meta content="404 or something" property="og:description">
+    <meta content="https://awesome-site.pages.dev/not-found" property="og:url">
     <meta content="https://awesome-site.pages.dev/assets/images/hog.jpg" property="og:image">
 
     <style>
@@ -16,13 +17,15 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name Display</title>
-    <link rel="stylesheet" href="names.css?v=1.8">
+    <title>Not Found</title>
+    <link rel="stylesheet" href="notfound.css">
     <link rel="stylesheet" href="splitting/splitting.css">
     <script src="splitting/splitting.js"></script>
-    <script src="names.js?v=3.5"></script>
 </head>
-<body onload = "fetchData()">
+
+<body>
+
+
     <div id="tile-container">
         <div id="tile-pattern"></div>
         <div id="gradient-overlay"></div>
@@ -37,18 +40,14 @@
             </ul>
         </nav>  
 
-        <center><div class="waveawesomeSmall" data-splitting><h1>! The People !</h1></div></center>
-        <center><div class="waveawesome" data-splitting><h1>! The People who left their name !</h1></div></center>
-        <center><p><a class="coolpagelink" href="https://foggydude.dev/submit">The submission page</a></p></center>
-        <center><mini>If you see some bad words and stuff here I'll try removing it later</mini></center>
+        <center><div class="waveawesomeSmall" data-splitting><h1>! NOT FOUND !</h1></div></center>
+        <center><div class="waveawesome" data-splitting><h1>! PAGE NOT FOUND !</h1></div></center>
 
-        <p id="loading">LOADING</p>
-        <p id="results"></p>
+        <h2>< Page not found :( ></h2>
+        <p>Seems like this page was not found...</p>
+        <p><a href="https://foggydude.dev">Go home</a></p>
 
-        <div id="namecontainer" class="namecontainer">
-        </div>
-
-        <p></p>
+        <p><img src="assets/images/404.gif" alt="404gif"></p>
 
     </div>
 

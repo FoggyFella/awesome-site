@@ -1,12 +1,12 @@
 @keyframes startanim{
     0%{
         opacity: 0;
-        transform: rotateY(-90deg);
+        transform: rotateX(-40deg);
     }
 
     100%{
         opacity: 1;
-        transform: rotateY(0);
+        transform: rotateX(0);
     }
 }
 
@@ -26,7 +26,7 @@
 }
 
 body{
-    background: linear-gradient(#f5ff6c 70%,#ffffff);
+    background: linear-gradient(#0d0010 70%,#000000);
     position: relative;
     overflow: hidden;
     font-family: Fredoka,sans-serif;
@@ -40,76 +40,6 @@ body{
     height: 100%;
     display: inline;
     width: 100%;
-}
-
-.formheading{
-    color: #35356f;
-    padding: 0;
-    margin: 10px;
-    font-weight: bold;
-}
-
-.nameInput{
-    width: 60%;
-    height: 30px;
-    border-radius: 10px;
-    font-family: "Fredoka";
-    text-align: center;
-    font-size: larger;
-}
-
-.submitShit{
-    width: 50%;
-    height: 50px;
-    background-color: #ffffff;
-    font-family: "Fredoka";
-    font-size: larger;
-    transition: all 0.4s;
-}
-
-.submitShit:hover{
-    scale: 1.05;
-}
-
-.submitShit:focus{
-    scale: 1.1;
-}
-
-.colortext{
-    color: #393c50;
-    font-size: 14px;
-    transform: translateY(-20px) ;
-}
-
-.inputstuff ul{
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    list-style: none;
-    align-items: center;
-    text-align: center;
-}
-
-.inputstuff li{
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.colorbutton{
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    text-indent: -9999px;
-    transition: all 0.4s;
-}
-
-.colorbutton:hover{
-    scale: 1.1;
-}
-
-.colorbutton:focus{
-    scale: 1.2;
-    transform: rotateZ(10deg);
 }
 
 .navbar ul{
@@ -154,7 +84,7 @@ body{
 
 #tile-pattern {
     background-color: #006eff27;
-    background-image: url("assets/name.svg");
+    background-image: url("assets/coolbg.svg");
     background-blend-mode:multiply;
     background-size: 10%;
     position: absolute;
@@ -166,6 +96,15 @@ body{
     opacity: 10%;
     animation: pan 180s linear infinite;
     will-change: background-position;
+}
+
+.videoThing {
+    border-radius: 100px;
+}
+
+.videoThing iframe{
+    border-radius: 10px;
+    max-width: 90%;
 }
 
 @keyframes pan{
@@ -197,6 +136,19 @@ body{
 
 p {
     padding-bottom:10px;
+}
+
+.myList{
+    margin: 20px;
+    padding: 0px;
+}
+
+.myList li{
+    position: relative;
+    top: -15px;
+    padding-bottom: 5px;
+    margin: 0px;
+    color: #000000;
 }
 
 a{
@@ -249,6 +201,12 @@ b{
     font-size: 20px;
 }
 
+.coolpagelink img{
+    width: 50%;
+    box-shadow: 3px 2px 3px#000000;
+    margin-right: 10px;
+}
+
 .waveawesome{
     font-size: 22px;
     text-shadow: 0px 2px 1px #5d5d5d;
@@ -288,7 +246,6 @@ b{
 }
 
 a img.thumbanail {
-    transform: scale(1.0) rotate(0deg);
     max-width: 180px;
     border-radius: 25px;
     border-style: dashed; 
@@ -301,6 +258,8 @@ a img.thumbanail {
 a img.thumbanail:hover {
     transform: scale(1.1) rotate(-1deg);
     box-shadow: 2px 3px 1px 1px #bd1a48;
+    animation: thumbanim 3s infinite ease;
+    transition: all 0.5;
 }
 
 .gameName{
@@ -311,18 +270,6 @@ a img.thumbanail:hover {
 
 .gameDesc{
     transform: translateY(-30px);
-}
-
-.footnotes p{
-    margin: 10px;
-    padding-bottom: 20px;
-}
-
-.footnotes .smaller{
-    color: #1a1a4582;
-    padding: 2px;
-    margin: 0px;
-    transform: translateY(-10px);
 }
 
 @media screen and (max-width: 800px){
