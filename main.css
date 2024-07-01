@@ -247,6 +247,10 @@ marquee{
     color: red;
 }
 
+.small{
+    font-size: 12px;
+}
+
 @media screen and (max-width: 800px){
     #mainstuff{
         width: 80vw;
