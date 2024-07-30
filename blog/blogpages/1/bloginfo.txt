@@ -1,0 +1,2 @@
+blogtitle = "My first blog post!"
+date = "29/07/2024"

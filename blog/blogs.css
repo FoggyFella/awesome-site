@@ -1,0 +1,105 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color:rgb(121, 255, 137);
+    font-family: "DM Sans", sans-serif;
+}
+
+h1{
+    text-shadow: 1px 1px 20px rgb(100, 255, 252);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h2{
+    color: rgb(49, 255, 114);
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-size: 60px;
+    font-weight: lighter;
+    text-shadow: 1px 1px 50px rgb(58, 255, 183);
+}
+
+.overlay{
+    background-image:url('https://img.itch.zone/aW1nLzEyMTk0NDUwLnBuZw==/original/0SaEfy.png');
+    background-repeat: repeat;
+    background-size: 10%;
+    width:      100%;
+    height:     100%; 
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
+    opacity: 0.5;
+    content: "";
+    pointer-events: none;
+    
+}
+
+.blogdir{
+    width: 90%;
+}
+
+.blogdir ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.blogdir a{
+    color: #fd7836;
+    text-shadow: 1px 1px 10px rgb(255, 64, 30);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 15px;
+    padding: 5px;
+    display: block;
+    background-color: rgba(156, 147, 255, 0.071);
+    background-image: linear-gradient(90deg,#ffffff00,#000000);
+    transition: all, 0.5s;
+    border: 2px;
+    border-color: #fd5e3600;
+    border-style: solid;
+}
+
+.blogdir a:hover{
+    margin-left: 20px;
+    background-color: rgba(130, 119, 255, 0.177);
+    border-color: #fd5e36;
+}
+
+.leftslide{
+    animation: leftslidein 0.7s ease-in-out;
+}
+
+@keyframes leftslidein {
+    0%{
+        transform: translateX(-2000px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.rightslide{
+    animation: rightslidein 0.7s ease-in-out;
+}
+
+@keyframes rightslidein {
+    0%{
+        transform: translateX(2000px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.blogdir p{
+    margin: 0;
+    opacity: 0.5;
+    margin-bottom: -2px;
+}
+
+.blogdir{
+    position: fixed;
+}
