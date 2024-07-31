@@ -47,62 +47,7 @@ h2{
 
 .blogdir{
     width: 90%;
-}
-
-.blogdir ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-.blogdir a{
-    color: #fd7836;
-    text-shadow: 1px 1px 10px rgb(255, 64, 30);
-    font-weight: bold;
-    text-decoration: none;
-    margin: 15px;
-    padding: 5px;
-    display: block;
-    background-color: rgba(156, 147, 255, 0.071);
-    background-image: linear-gradient(90deg,#ffffff00,#000000);
-    transition: all, 0.5s;
-    border: 2px;
-    border-color: #fd5e3600;
-    border-style: solid;
-}
-
-.blogdir a:hover{
-    margin-left: 20px;
-    background-color: rgba(130, 119, 255, 0.177);
-    border-color: #fd5e36;
-}
-
-.leftslide{
-    animation: leftslidein 0.7s ease-in-out;
-}
-
-@keyframes leftslidein {
-    0%{
-        transform: translateX(-2000px);
-    }
-
-    100%{
-        transform: translateX(0px);
-    }
-}
-
-.rightslide{
-    animation: rightslidein 0.7s ease-in-out;
-}
-
-@keyframes rightslidein {
-    0%{
-        transform: translateX(2000px);
-    }
-
-    100%{
-        transform: translateX(0px);
-    }
+    position: relative;
 }
 
 .blogdir p{
@@ -111,9 +56,35 @@ h2{
     margin-bottom: -2px;
 }
 
-.blogdir{
-    position: fixed;
+
+.blogdir ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
+.blogdir a{
+    color: #fd7836;
+    text-shadow: 1px 1px 10px rgb(255, 64, 30);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    background-color: rgba(156, 147, 255, 0.071);
+    background-image: linear-gradient(90deg,#ffffff00,#000000);
+    transition: all, 0.5s;
+    border: 2px;
+    border-color: #fd5e3600;
+    border-style: solid;
+    margin: 15px;
+    padding: 5px;
+}
+
+.blogdir a:hover{
+    margin-left: 20px;
+    background-color: rgba(130, 119, 255, 0.177);
+    border-color: #fd5e36;
+}
+
 
 .addition{
     padding: 0;
