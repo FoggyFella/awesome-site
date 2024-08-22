@@ -10,7 +10,7 @@ async function submitAll(){
     if (nameallowed){
         await make_post_request(username,message)
         alert("Succesfully submitted!")
-        window.location.replace("https://foggydude.dev/names");
+        window.location.replace("https://foggydude.dev/assets/thank.png");
     }
 }
 
