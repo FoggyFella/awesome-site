@@ -1,6 +1,7 @@
 async function submitAll(){
     const nameElement = document.getElementById("uname")
     const msgElement = document.getElementById("umsg")
+    const theButton = document.getElementById("elButton")
 
     const username = nameElement.value
     const message = msgElement.value
@@ -8,6 +9,7 @@ async function submitAll(){
     const nameallowed = true
 
     if (nameallowed){
+        theButton.remove()
         await make_post_request(username,message)
         alert("Succesfully submitted!")
         window.location.replace("https://foggydude.dev/assets/images/thank.png");
