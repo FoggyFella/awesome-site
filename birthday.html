@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+
+    <meta content="My Birthday!" property="og:title">
+    <meta content="You can submit your birthday message here" property="og:description">
+    <meta content="https://awesome-site.pages.dev/birthday" property="og:url">
+    <meta content="https://awesome-site.pages.dev/assets/images/hog.jpg" property="og:image">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Birthday!</title>
+    <link rel="stylesheet" href="birthday.css?v=1.1">
+    <link rel="stylesheet" href="splitting/splitting.css">
+    <script src="splitting/splitting.js"></script>
+    <script src="birthday.js?v=1.1"></script>
+</head>
+<body>
+    <div id="tile-container">
+        <div id="tile-pattern"></div>
+        <div id="gradient-overlay"></div>
+    </div>
+    <div id="mainstuff">
+        <nav class="navbar">
+            <center><img src="assets/LogoLettersRender.png" alt="my log o"></center>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="socials.html">Contacts</a></li>
+                <li><a href="cool.html">Cool Stuff</a></li>
+            </ul>
+        </nav>  
+
+        <center><div class="waveawesomeSmall" data-splitting><h1>! Submit a birthday message !</h1></div></center>
+        <center><div class="waveawesome" data-splitting><h1>! Birthday message !</h1></div></center>
+
+        <div class="inputstuff">
+            <center><audio controls src="assets/Surfing on a Sine Wave.mp3"></audio></center>
+
+            <center><p>Send me a birthday message that will actually popup on my screen!</p></center>
+
+            <center><p class="formheading">Your username:</p></center>
+            <center><input maxlength="16" class="nameInput" type="text" id="uname"><br><br></center>
+            <center><p class="formheading">Your message:</p></center>
+            <center><textarea maxlength="150" class="msgInput" id="umsg"></textarea></center>
+            <center><p id="selectedcolor" class="colortext"></p></center>
+
+            <center><button onmousedown="submitAll()" type="button" class="submitShit">Submit your stuff!</button><br><br></center>
+
+            <center><p id="selectedcolor" class="colortext">music is Surfing on a Sine Wave by Fearofdark</p></center>
+            <center><p id="selectedcolor" class="colortext">All the messages are saved on my laptop</p></center>
+        </div>
+    </div>
+
+    <script>Splitting();</script>
+</body>
+</html>
