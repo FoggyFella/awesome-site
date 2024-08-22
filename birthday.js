@@ -5,6 +5,8 @@ async function submitAll(){
     const username = nameElement.value
     const message = msgElement.value
 
+    const nameallowed = true
+
     if (nameallowed){
         await make_post_request(username,message)
         alert("Succesfully submitted!")
