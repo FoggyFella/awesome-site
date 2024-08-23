@@ -17,10 +17,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Birthday!</title>
-    <link rel="stylesheet" href="birthday.css?v=1.1">
+    <link rel="stylesheet" href="birthday.css?v=1.3">
     <link rel="stylesheet" href="splitting/splitting.css">
     <script src="splitting/splitting.js"></script>
-    <script src="birthday.js?v=1.6"></script>
 </head>
 <body>
     <div id="tile-container">
@@ -37,21 +36,21 @@
             </ul>
         </nav>  
 
-        <center><div class="waveawesomeSmall" data-splitting><h1>! Submit a birthday message !</h1></div></center>
-        <center><div class="waveawesome" data-splitting><h1>! Birthday message !</h1></div></center>
+        <center><div class="waveawesomeSmall" data-splitting>! Birthday Message !<h1></h1></div></center>
+        <center><div class="waveawesome" data-splitting><h1>! Submit a birthday message !</h1></div></center>
 
         <div class="inputstuff">
             <center><audio controls src="assets/Surfing on a Sine Wave.mp3"></audio></center>
 
-            <center><p>Send me a birthday message that will actually popup on my screen!</p></center>
+            <center><p>You sent me birthday messages that actually popped up on my screen!</p></center>
 
-            <center><p class="formheading">Your username:</p></center>
-            <center><input maxlength="16" class="nameInput" type="text" id="uname"><br><br></center>
-            <center><p class="formheading">Your message:</p></center>
-            <center><textarea maxlength="150" class="msgInput" id="umsg"></textarea></center>
+            <center><p class="formheading">My username:</p></center>
+            <center><input readonly maxlength="16" class="nameInput" type="text" id="uname" placeholder="Foggy"><br><br></center>
+            <center><p class="formheading">My message:</p></center>
+            <center><textarea readonly maxlength="150" class="msgInput" id="umsg"> Thank you for your messages! See you next year :D   Messages received: 37    Unique names: 17</textarea></center>
             <center><p id="selectedcolor" class="colortext"></p></center>
 
-            <center><button onmousedown="submitAll()" type="button" class="submitShit" id="elButton">Submit your stuff!</button><br><br></center>
+            <center><button type="button" class="submitShit" id="elButton">Submissions closed!</button><br><br></center>
 
             <center><p id="selectedcolor" class="colortext">music is Surfing on a Sine Wave by Fearofdark</p></center>
             <center><p id="selectedcolor" class="colortext">All the messages are saved on my laptop</p></center>

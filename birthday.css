@@ -64,8 +64,10 @@ body{
     border-radius: 5px;
     font-family: "Fredoka";
     font-size: large;
-    text-align: start;
+    text-align: center;
     resize: none;
+    font-weight: 600;
+    color: #0000007b;
 }
 
 .submitShit{
@@ -75,14 +77,12 @@ body{
     font-family: "Fredoka";
     font-size: larger;
     transition: all 0.4s;
+    opacity: 0.5;
 }
 
 .submitShit:hover{
-    scale: 1.05;
-}
-
-.submitShit:focus{
-    scale: 1.1;
+    scale: 1.00;
+    background-color: #ffc7c7;
 }
 
 .colortext{
