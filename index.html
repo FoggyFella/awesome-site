@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoggyDude Home!</title>
-    <link rel="stylesheet" href="main.css?v=1.9">
+    <link rel="stylesheet" href="main.css?v=2.0">
     <link rel="stylesheet" href="splitting/splitting.css">
     <script src="splitting/splitting.js"></script>
 </head>
@@ -41,7 +41,7 @@
         <center><div class="waveawesome" data-splitting><h1>! Hey guys welcome to my website !</h1></div></center>
         <h2>< About me ></h2>
         <p>My name is Alex, but I go by <em>FoggyDude</em> on the internets :D</p>
-        <p class="rightAlign"> I am a Ukrainian game developer but I also do other fun and cool stuff... <b><mini>like this site</mini></b></p>
+        <p class="rightAlign"> I'm a guy from Ukraine. I make fun stuff like games but also cool stuff... <b><mini>like this site</mini></b></p>
         <p>I have been dabbling in programming and game devving as a hobby since 2022. It all started because I was bored one day and my friend had a programming book.</p>
         <p class="rightAlign">Check out my <a href="socials.html">contacts</a> if you wanna!</p>
 
@@ -50,30 +50,49 @@
         <p class="rightAlign">All my games are free any support is highly appreciated! My projects are mostly solo and I enjoy sharing them with the world.</p>
         <b><center><p class="wavyText">Here is some of the games that I made: </p></center></b>
         
-        <div class="gamesContainer">
-            <div class="gamebox">
+        <div class="game-slide-container">
+            <div class="gameslide fade">
+                <a href="assets/images/amessage.png">
+                    <img src="assets/images/games/rice.png">
+                </a>
+                <center><div class="gamename">I Need Rice</div></center>
+                <center><div class="gamedesc">A bizzare adventure for a bag of rice.</div></center>
+                <center><div class="gamestatus">Status: In Development</div></center>
+            </div>
+            <div class="gameslide fade">
+                <a href="https://foggydude.itch.io/wizard-fella">
+                    <img src="assets/images/games/wizardfella.png">
+                </a>
+                <center><div class="gamename">Wizard Fella DEMO</div></center>
+                <center><div class="gamedesc">A 3D platformer about a little fella!</div></center>
+                <center><div class="gamestatus">Status: On hold :(</div></center>
+            </div>
+            <div class="gameslide fade">
                 <a href="https://foggydude.itch.io/strict-rules">
-                    <img class="thumbanail" src="assets/images/games/strictrules.png" alt="Strict Rule cover">
+                    <img src="assets/images/games/strictrules.png">
                 </a>
-            <p class="gameName">Strict Rules</p> 
-            <p class="gameDesc">Available for free</p>
+                <center><div class="gamename">Strict Rules</div></center>
+                <center><div class="gamedesc">A horror game involving... a game</div></center>
+                <center><div class="gamestatus">Status: Finished</div></center>
             </div>
-
-            <div class="gamebox">
+            <div class="gameslide fade">
                 <a href="https://foggydude.itch.io/lads-bus">
-                    <img class="thumbanail" src="assets/images/games/ladsbus.png" alt="Lads Bus   cover">
+                    <img src="assets/images/games/ladsbus.png">
                 </a>
-            <p class="gameName">Lads Bus</p> 
-            <p class="gameDesc">Available for free</p>
+                <center><div class="gamename">Lads Bus</div></center>
+                <center><div class="gamedesc">An infinite runner style game with a bus!</div></center>
+                <center><div class="gamestatus">Status: Finished</div></center>
             </div>
-
-            <div class="gamebox">
+            <div class="gameslide fade">
                 <a href="https://foggydude.itch.io/the-cabin-a-scayr-game">
-                    <img class="thumbanail" src="assets/images/games/cabincover.png" alt="The Cabin cover">
+                    <img src="assets/images/games/cabincover.png">
                 </a>
-            <p class="gameName">The Cabin (scayr game)</p> 
-            <p class="gameDesc">Available for free...</p>
+                <center><div class="gamename">The Cabin</div></center>
+                <center><div class="gamedesc">A sarcastic spooky game</div></center>
+                <center><div class="gamestatus">Status: Finished</div></center>
             </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
         <center><p>For a full list of my games check out my <a href="https://foggydude.itch.io">itch.io page</a></p></center>
@@ -86,5 +105,6 @@
     </div>
 
     <script>Splitting();</script>
+    <script src="indexscript.js"></script>
 </body>
 </html>
