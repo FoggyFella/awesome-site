@@ -1,0 +1,173 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color:rgb(121, 255, 137);
+    font-family: "DM Sans", sans-serif;
+    animation: appear 0.6s ease-in-out;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0.0;
+    }
+
+    100%{
+        opacity: 1.0;
+    }
+}
+
+h1{
+    text-shadow: 1px 1px 20px rgb(100, 255, 252);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h2{
+    color: rgb(49, 255, 114);
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-size: 60px;
+    font-weight: lighter;
+    text-shadow: 1px 1px 50px rgb(58, 255, 183);
+}
+
+.overlay{
+    background-image:url('https://img.itch.zone/aW1nLzEyMTk0NDUwLnBuZw==/original/0SaEfy.png');
+    background-repeat: repeat;
+    background-size: 10%;
+    width:      100%;
+    height:     100%; 
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
+    opacity: 0.5;
+    content: "";
+    pointer-events: none;
+    
+}
+
+.blogdir{
+    width: 90%;
+    position: relative;
+}
+
+.blogdir p{
+    margin: 0;
+    opacity: 0.5;
+    margin-bottom: -2px;
+}
+
+
+.blogdir ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blogdir a{
+    color: #fd7836;
+    text-shadow: 1px 1px 10px rgb(255, 64, 30);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    background-color: rgba(156, 147, 255, 0.071);
+    background-image: linear-gradient(90deg,#ffffff00,#000000);
+    transition: all, 0.5s;
+    border: 2px;
+    border-color: #fd5e3600;
+    border-style: solid;
+    margin: 15px;
+    padding: 5px;
+}
+
+.blogdir a:hover{
+    margin-left: 20px;
+    background-color: rgba(130, 119, 255, 0.177);
+    border-color: #fd5e36;
+}
+
+
+.addition{
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.maincontent p{
+    color: #ffe4de;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    background-color: #662ff20e;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.maincontent{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.maincontent img{
+    opacity: 0.5;
+    transition: all 0.25s;
+    margin: 0px;
+}
+
+.maincontent img:hover{
+    opacity: 1.0;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border: 10px;
+    border-color: #662ff20e;
+    border-style: solid;
+}
+
+.addition a{
+    font-weight: bolder;
+    font-size: 20px;
+    transition: all 0.25s;
+    color: rgb(49, 255, 114);
+    font-style: italic;
+    opacity: 1.0;
+}
+
+.addition a:hover{
+    color: #b0ffbb;
+    opacity: 1.0;
+}
+
+textarea{
+    resize: none;
+    width: 500px;
+    height: 250px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button{
+    text-shadow: 1px 1px 20px rgb(100, 255, 252);
+    font-weight: bold;
+    font-size: 30px;
+    color:rgb(121, 255, 137);
+    font-family: "DM Sans", sans-serif;
+    background-color: #000000;
+    border: none;
+    transition: all 0.25s;
+    width: 510px;
+    padding: 0%;
+    margin-left: 0px;
+}
+
+button:hover{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border: 10px;
+    border-color: #2ff2de0e;
+    border-style: solid;
+}
+
+button:active{
+    transform: scale(0.9);
+}
