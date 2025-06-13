@@ -79,8 +79,23 @@ const secretwords = [
     "cheesyburger"
 ]
 
+const cipherwords = {
+    "triffid":"🟩🟩🟩",
+    "pigpen":"⬛⬜🟪",
+    "beaufort":"🟫🟫🟨",
+    "wadsworth":"⬜⬛⬜",
+    "caesar":"🟩🟥🟩",
+    "autokey":"🟦🟨🟦",
+    "book":"🟫⬜🟫",
+    "alphabet":"🟥🟦🟨"
+}
+
 function get_random_secret(){
     return secretwords[Math.floor(Math.random() * (secretwords.length-1))]
+}
+
+function get_random_secret_encoded(){
+    return Object.keys(cipherwords)[Math.floor(Math.random() * (Object.keys(cipherwords).length))]
 }
 
 function shuffle(array,seed) {
@@ -116,6 +131,7 @@ function unshuffle(array, seed) {
 }
 
 function initiate_translation(){
+    console.log(get_random_secret_encoded())
     const textElement = document.getElementById("texttolang")
     let text = textElement.value
 
@@ -130,7 +146,8 @@ function initiate_translation(){
 function translate_text_into_lang(){
     const textElement = document.getElementById("texttolang")
     var text = textElement.value
-    var the_secret = get_random_secret()
+    var the_secret = get_random_secret_encoded()
+    var secret_as_emojis = cipherwords[the_secret]
 
     console.log(text)
 
@@ -156,7 +173,7 @@ function translate_text_into_lang(){
     }
     console.log(translated_text.length);
 
-    translated_text += "\n/"+the_secret
+    translated_text += "\n/"+secret_as_emojis
     textElement.value = translated_text;
     console.log(shuffled_text)
     unshuffle(shuffled_text,the_secret)
@@ -197,7 +214,7 @@ function translate_lang_into_text(){
     }
     
     if (split_text.length != 1){
-        var the_secret = split_text[1].trim()
+        var the_secret = split_text[1].trim().toLowerCase()
         console.log(translated_text.length)
         console.log(translated_text);
         let unshuffled_string = Array.from(translated_text);
