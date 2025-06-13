@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta content="GENERAL-2 TRANSLATOR" property="og:title">
@@ -17,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GENERAL-2 TRANSLATOR</title>
     <link rel="stylesheet" href="translator.css">
+    <script src="seedrandom.min.js"></script>
     <script src="translator.js"></script>
 </head>
 
@@ -29,22 +29,12 @@
 
         <p></p>
     
-        <h1> < Text to General-2 language > </h1>
+        <h1> < THE TRANSLATOR > </h1>
 
         <textarea id="texttolang"></textarea>
         <p></p>
 
-        <button onmousedown="translate_text_into_lang()">GO</button>
-
-        <p>
-
-            
-        <h1> < General-2 language to text > </h1>
-
-        <textarea id="langtotext"></textarea>
-        <p></p>
-    
-        <button onmousedown="translate_lang_into_text()">GO</button>
+        <button onmousedown="initiate_translation()">GO</button>
 
     </div>
 </body>

@@ -29,61 +29,177 @@ const dictionary = {
     ",":"⛏",
     ".":"⚬",
     "/":"⛆",
-    ":":"⛓"
+    ":":"⛓",
+    "A":"☿",
+    "B":"⚿",
+    "C":"⛝",
+    "D":"╫",
+    "E":"ᢅ",
+    "F":"෴",
+    "G":"♣",
+    "H":"〲",
+    "I":"𝒻",
+    "J":"𝔊",
+    "K":"깆",
+    "L":"꒦",
+    "M":"〠",
+    "N":"〄",
+    "O":"〇",
+    "P":"𐌸",
+    "Q":"ª",
+    "R":"©",
+    "S":"؃",
+    "T":"ܓ",
+    "U":"₳",
+    "V":"𐐞",
+    "W":"𝅙",
+    "X":"╳",
+    "Y":"𝍖",
+    "Z":"𝄸",
+    " ":"☲"
+}
+
+const secretwords = [
+    "eggshell",
+    "plum",
+    "smog",
+    "radiate",
+    "dictionary",
+    "green",
+    "reload",
+    "fortnite",
+    "undermine",
+    "construct",
+    "clear",
+    "enemy",
+    "new",
+    "pickle",
+    "tumult",
+    "trial",
+    "cheesyburger"
+]
+
+function get_random_secret(){
+    return secretwords[Math.floor(Math.random() * (secretwords.length-1))]
+}
+
+function shuffle(array,seed) {
+  var myrng = new Math.seedrandom(seed);
+
+  let currentIndex = array.length;
+
+  while (currentIndex != 0) {
+
+    let randomIndex = Math.floor(myrng() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+}
+
+function unshuffle(array, seed) {
+  var myrng = new Math.seedrandom(seed);
+  let currentIndex = array.length;
+  let swaps = [];
+
+  while (currentIndex !== 0) {
+    let randomIndex = Math.floor(myrng() * currentIndex);
+    currentIndex--;
+    swaps.push([currentIndex, randomIndex]);
+  }
+
+  for (let i = swaps.length - 1; i >= 0; i--) {
+    let [a, b] = swaps[i];
+    [array[a], array[b]] = [array[b], array[a]];
+  }
+}
+
+function initiate_translation(){
+    const textElement = document.getElementById("texttolang")
+    let text = textElement.value
+
+    if (checkIfKeyExist(dictionary,text[0])){
+        translate_text_into_lang();
+    }
+    else{
+        translate_lang_into_text();
+    }
 }
 
 function translate_text_into_lang(){
     const textElement = document.getElementById("texttolang")
-    const text = textElement.value
+    var text = textElement.value
+    var the_secret = get_random_secret()
 
     console.log(text)
 
-    let un_text = text.toLowerCase();
+    let shuffled_text = Array.from(text);
+    shuffle(shuffled_text,the_secret)
     let translated_text = ""
 
-    let chars = Array.from(un_text)
+    let chars = Array.from(shuffled_text)
+
+    textElement.value = ""
 
     for (let char of chars){
         console.log(char)
         if (checkIfKeyExist(dictionary,char)){
             translated_text += dictionary[char];
-            console.log(dictionary[char])
+            console.log(dictionary[char]);
         }
         else {
             translated_text += char;
-            console.log("idk bruv")
+            console.log("idk bruv");
         }
+        translated_text += "‎" 
     }
+    console.log(translated_text.length);
 
-    console.log(translated_text);
+    translated_text += "\n/"+the_secret
     textElement.value = translated_text;
+    console.log(shuffled_text)
+    unshuffle(shuffled_text,the_secret)
+    console.log(shuffled_text)
 }
 
 function translate_lang_into_text(){
-    const textElement = document.getElementById("langtotext")
-    const text = textElement.value
+    const textElement = document.getElementById("texttolang")
+    var text = textElement.value
 
-    console.log(text)
+    let split_text = text.split("/")
 
-    let un_text = text.toLowerCase();
+    let the_needed_text = split_text[0].split("\n")[0]
+
     let translated_text = ""
 
-    let chars = Array.from(un_text)
+     let chars = Array.from(the_needed_text)
 
-    for (let char of chars){
-        console.log(char)
-        if (Object.values(dictionary).includes(char)){
-            console.log("holy moly")
+     for (let char of chars){
+         console.log(char)
+         if (char != "‎"){
+           if (Object.values(dictionary).includes(char)){
+             console.log("holy moly")
             translated_text += getKeyByValue(dictionary,char);
-        }
-        else {
-            translated_text += char;
-            console.log("idk bruv")
-        }
+              }
+             else {
+                 translated_text += char;
+                 console.log("idk bruv")
+              }
+         }
     }
-
-    console.log(translated_text);
-    textElement.value = translated_text;
+    
+    if (split_text.length != 1){
+        var the_secret = split_text[1].trim()
+        console.log(translated_text.length)
+        console.log(translated_text);
+        let unshuffled_string = Array.from(translated_text);
+        unshuffle(unshuffled_string,the_secret)
+        textElement.value = unshuffled_string.join("").toString();
+    }
+    else{
+        textElement.value = translated_text;
+    }
 }
 
 const checkIfKeyExist = (objectName, keyName) => {
