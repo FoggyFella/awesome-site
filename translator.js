@@ -169,7 +169,14 @@ function translate_lang_into_text(){
 
     let split_text = text.split("/")
 
-    let the_needed_text = split_text[0].split("\n")[0]
+    let the_needed_text = ""
+
+    if (split_text.length != 1){
+        the_needed_text = split_text[0].substring(0,split_text[0].length-1)
+    }
+    else{
+        the_needed_text = split_text[0]
+    }
 
     let translated_text = ""
 
