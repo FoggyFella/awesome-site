@@ -83,7 +83,7 @@ const cipherwords = {
     "triffid":"🟩🟩🟩",
     "pigpen":"⬛⬜🟪",
     "beaufort":"🟫🟫🟨",
-    "wadsworth":"⬜⬛⬜",
+    "wadsworth":"⬛⬜⬛",
     "caesar":"🟩🟥🟩",
     "autokey":"🟦🟨🟦",
     "book":"🟫⬜🟫",
