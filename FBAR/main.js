@@ -12,7 +12,7 @@ function whenLoaded(){
 
 function leaving(){
     var audio = document.querySelector("audio");
-    document.cookie = "musictime="+audio.currentTime.toString();
+    document.cookie = "musictime="+(audio.currentTime+0.25).toString();
 }
 
 function getCookie(cname) {
