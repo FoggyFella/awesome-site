@@ -40,6 +40,11 @@ a{
     height: 600px;
 }
 
+.bigvid{
+    width: 800px;
+    height: 600px;
+}
+
 @keyframes fadein {
     0%{
         opacity: 0;
