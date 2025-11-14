@@ -7,6 +7,7 @@ function whenLoaded(){
 
     var audio = document.querySelector("audio");
     audio.currentTime = parseInt(getCookie("musictime"));
+    audio.volume = 0.2;
 }
 
 function leaving(){
