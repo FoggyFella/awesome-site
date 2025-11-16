@@ -1,3 +1,5 @@
+const lowVolumes = ["/FBAR/interrogation.html"];
+
 function whenLoaded(){
     var links = document.querySelectorAll('a');
 
@@ -15,7 +17,15 @@ function whenLoaded(){
     audio.addEventListener("ended",onMusicEnded);
     audio.src = "assets/music/"+theMusic+".mp3";
     audio.load();
-    audio.volume = 0.2;
+    var name = document.location.pathname;
+    for (page in lowVolumes){
+      var lepage = lowVolumes[page];
+      if (name == lepage){
+        audio.volume = 0.05;
+      } else {
+        audio.volume = 0.2;
+      }
+    }
     audio.play();
 
     var newTime = getCookie("musictime");
