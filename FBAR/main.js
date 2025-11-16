@@ -1,4 +1,10 @@
-const lowVolumes = ["/FBAR/interrogation.html"];
+const lowVolumes = ["/FBAR/interrogation.html","/FBAR/computer.html"];
+
+  const songs = [
+    "indream",
+    "prayer",
+    "chains"
+  ]
 
 function whenLoaded(){
     var links = document.querySelectorAll('a');
@@ -15,16 +21,16 @@ function whenLoaded(){
     }
 
     audio.addEventListener("ended",onMusicEnded);
-    audio.src = "assets/music/"+theMusic+".mp3";
+    if (songs.includes(theMusic)){
+      audio.src = "assets/music/"+theMusic+".mp3";
+    } else {
+      audio.src = "assets/music/indream.mp3";
+    }
     audio.load();
     var name = document.location.pathname;
-    for (page in lowVolumes){
-      var lepage = lowVolumes[page];
-      if (name == lepage){
-        audio.volume = 0.05;
-      } else {
-        audio.volume = 0.2;
-      }
+    audio.volume = 0.2;
+    if (lowVolumes.includes(name)){
+      audio.volume = 0.05;
     }
     audio.play();
 
@@ -56,12 +62,6 @@ function leaving(){
 }
 
 function getRandomSong(){
-  const songs = [
-    "Atoms",
-    "indream",
-    "rip_and_tear"
-  ]
-
   var random_ind = Math.round(Math.random()*(songs.length-1));
   return songs[random_ind];
 }

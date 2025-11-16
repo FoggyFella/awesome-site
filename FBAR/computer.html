@@ -3,13 +3,18 @@
 
 <head>
     <link rel="stylesheet" href="fbar.css?v=1.0">
+    <script src="main.js?v=1.5"></script>
 </head>
 
-<body>
+<body onload="whenLoaded()">
     THE COMPUTER
     <div class="imgcontainer">
         <video autoplay muted class="bigvid" src="assets/computerboot.mp4">
     </div>
+
+    <audio id="musicPlayer" preload="auto" autoplay="autoplay">
+        <source src="assets/music/indream.mp3" type="audio/mp3">
+    </audio>
     <audio preload="auto" autoplay="autoplay">
         <source src="assets/soundfx/FBARlogochime.mp3" type="audio/mp3">
     </audio>
