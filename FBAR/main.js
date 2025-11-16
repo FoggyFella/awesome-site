@@ -1,4 +1,4 @@
-const lowVolumes = ["/FBAR/interrogation.html","/FBAR/computer.html"];
+const lowVolumes = ["/FBAR/interrogation","/FBAR/computer"];
 
   const songs = [
     "indream",
