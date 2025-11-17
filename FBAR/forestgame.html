@@ -4,20 +4,22 @@
 <head>
     <link rel="stylesheet" href="fbar.css?v=1.0">
     <script src="main.js?v=1.6"></script>
+    <script src="forestgame.js"></script>
 </head>
 
-<body>
-    <a class="linkback" href="?up" target="_self">↑</a>
-    <a class="linkback" href="?left" target="_self">←</a>
+<body onload="processMovement()">
+    <button id="upbutton" class="linkback">↑</button>
     <div class="imgcontainer">
         <img class="computerborder" src="assets/border.png">
+        <div class="horizontalcont">
+            <button id="leftbutton" class="leftkey">←</button>
+            <button id="rightbutton" class="rightkey">→</button>
+        </div>
+    </div>
         <img class="forestgame">
     </div>
-    <div class="rightalign">
-        <center><a class="linkback" href="?right" target="_self">→</a></center>
-    </div>
-    <p></p>
-    <a class="linkback" href="?down" target="_self">↓</a>
+    <button id="downbutton" class="linkback">↓</button>
+    <p id="debug">Current path: </p>
 
 </body>
 

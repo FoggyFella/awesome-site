@@ -33,6 +33,12 @@ a{
     font-size: 40px;
     color: white;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.linkback:hover{
+    transform: scale(1.1,1.1);
 }
 
 .bigimage{
@@ -46,21 +52,46 @@ a{
     z-index: 2;
 }
 
-.rightalign{
-    display: inline-block;
-    justify-content: right;
-    background-color: bisque;
-    width: 800px;
-}
-
-.rightalign a{
-    background-color: crimson;
-    text-align: right;
-}
-
 .bigvid{
     width: 800px;
     height: 600px;
+}
+
+.horizontalcont{
+    position: absolute;
+    padding: none;
+    margin: none;
+    width: 900px;
+}
+
+.rightkey{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 860px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.rightkey:hover{
+    transform: scale(1.1,1.1);
+}
+
+.leftkey{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    right: 860px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.leftkey:hover{
+    transform: scale(1.1,1.1);
 }
 
 @keyframes fadein {
