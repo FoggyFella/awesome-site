@@ -28,9 +28,9 @@ function whenLoaded(){
     }
     audio.load();
     var name = document.location.pathname;
-    audio.volume = 0.2;
+    audio.volume = 0.08;
     if (lowVolumes.includes(name)){
-      audio.volume = 0.05;
+      audio.volume = 0.04;
     }
     audio.play();
 
@@ -52,7 +52,7 @@ function onMusicEnded(){
     var audio = document.getElementById("musicPlayer");
     audio.src = "assets/music/"+theMusic+".mp3";
     audio.load();
-    audio.volume = 0.2;
+    audio.volume = 0.08;
     audio.play();
 }
 
