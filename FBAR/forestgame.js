@@ -13,47 +13,52 @@ const translations = {
 }
 
 function processMovement(){
-    const debuglabel = document.getElementById("debug");
-    //console.log(window.location.search);
     const myParams = Array.from(new URLSearchParams(window.location.search).keys());
-    debuglabel.innerText = "";
-
-    if (myParams.length == 0){
-        debuglabel.innerText = "Current path: none";
-        return;
-    }
-
-    var new_text = "?";
-    var ind = 0;
-    for (const key of myParams){
-        new_text += key+"&";
-        ind++;
-    }
-
-    debuglabel.innerText = new_text;
 
     const upb = document.getElementById("upbutton");
     const leftb = document.getElementById("leftbutton");
     const rightb = document.getElementById("rightbutton");
     const downb = document.getElementById("downbutton");
 
-    const lastinput = myParams.at(myParams.length-1);
+    upb.addEventListener("click",move,false);
+    upb.params = myParams;
 
-    upb.addEventListener("click",test);
+    downb.addEventListener("click",move,false);
+    downb.params = myParams;
 
-    //upb.setAttribute("href",new_text+"up");;
-    //leftb.setAttribute("href",new_text+"left");
-    //rightb.setAttribute("href",new_text+"right");
-    //downb.setAttribute("href",new_text+"down");
-    //changeButtonPath(myParams,downb,lastinput);
+    leftb.addEventListener("click",move,false);
+    leftb.params = myParams;
+
+    rightb.addEventListener("click",move,false);
+    rightb.params = myParams;
+
+    setDebugText(myParams);
 }
 
-function test(){
-    console.log("fuck");
+function setDebugText(params){
+    const debuglabel = document.getElementById("debug");
+    debuglabel.innerText = "";
+
+    if (params.length == 0){
+        debuglabel.innerText = "Current path: none";
+        return;
+    }
+
+    var new_text = "";
+    var ind = 0;
+    for (const key of params){
+        new_text += key+",";
+        ind++;
+    }
+
+    debuglabel.innerText = new_text;
 }
 
-function changeButtonPath(params,button,lastinput){
-    const buttonlabel = translations[button.innerText];
+function move(evt){
+    const buttonlabel = translations[evt.currentTarget.innerText];
+    const params = evt.currentTarget.params;
+    const lastinput = params.at(params.length-1);
+
     var new_text = "?";
 
     if (params.length >= 1){
@@ -80,5 +85,5 @@ function changeButtonPath(params,button,lastinput){
         new_text += buttonlabel;
     }
 
-    button.setAttribute("href",new_text);
+    window.location.href = new_text;
 }
