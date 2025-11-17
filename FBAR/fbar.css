@@ -40,6 +40,24 @@ a{
     height: 600px;
 }
 
+.computerborder{
+    width: 800px;
+    height: 600px;
+    z-index: 2;
+}
+
+.rightalign{
+    display: inline-block;
+    justify-content: right;
+    background-color: bisque;
+    width: 800px;
+}
+
+.rightalign a{
+    background-color: crimson;
+    text-align: right;
+}
+
 .bigvid{
     width: 800px;
     height: 600px;
