@@ -1,3 +1,4 @@
+//Used for movement
 const opposites = {
     "right":"left",
     "left":"right",
@@ -5,6 +6,7 @@ const opposites = {
     "down":"up"
 };
 
+//Used for movement
 const translations = {
     "↓":"down",
     "↑":"up",
@@ -12,8 +14,31 @@ const translations = {
     "→":"right"
 }
 
+//Used for seed generation
+const values = {
+    "right":"2",
+    "left":"4",
+    "up":"1",
+    "down":"3"
+}
+
+//This should be names of background pngs which will get picked randomly based on the seed
+const backgroundVariations = [
+    "cool",
+    "awesome",
+    "pretty cool",
+    "pretty awesome",
+    "ok",
+    "alright",
+    "almighty"
+]
+
 function processMovement(){
     const myParams = Array.from(new URLSearchParams(window.location.search).keys());
+    var theSeed = generateSeed(myParams);
+    var myrng = new Math.seedrandom(parseInt(theSeed));
+
+    console.log("The current seed is: " + theSeed);
 
     const upb = document.getElementById("upbutton");
     const leftb = document.getElementById("leftbutton");
@@ -32,37 +57,65 @@ function processMovement(){
     rightb.addEventListener("click",move,false);
     rightb.params = myParams;
 
-    setDebugText(myParams);
+    setDebugText(myParams, getRandomBackground(myrng));
 }
 
-function setDebugText(params){
+function generateSeed(params){
+    //This makes a seed based on the current path you have taken
+    var newSeed = "";
+
+    if (params.length == 0){
+        newSeed = "1";
+        return newSeed;
+    }
+
+    for (const key of params){
+        newSeed += values[key]
+    }
+    return newSeed;
+}
+
+function getRandomBackground(therng){
+    //Uses the seed to get a random picture for the background
+
+    let randomnum = Math.abs(therng() * backgroundVariations.length-1);
+    let randomIndex = Math.round(randomnum);
+    return backgroundVariations[randomIndex];
+}
+
+function setDebugText(params, variation){
+    //This is just for debug and it displays the path you have taken with text at the bottom
+
     const debuglabel = document.getElementById("debug");
     debuglabel.innerText = "";
 
     if (params.length == 0){
         debuglabel.innerText = "Current path: none";
+        debuglabel.innerText += "\n"+variation.toString();
         return;
     }
 
     var new_text = "";
     var ind = 0;
     for (const key of params){
-        new_text += key+",";
+        new_text += key+"|";
         ind++;
     }
 
     debuglabel.innerText = new_text;
+    debuglabel.innerText += "\n"+variation.toString();
 }
 
 function move(evt){
+    //Gets called when you press a movement key
+
     const buttonlabel = translations[evt.currentTarget.innerText];
     const params = evt.currentTarget.params;
     const lastinput = params.at(params.length-1);
 
     var new_text = "?";
 
-    if (params.length >= 1){
-        console.log("fick");
+    if (params.length >= 1){;
         if (opposites[lastinput] == buttonlabel){
             params.pop();
 

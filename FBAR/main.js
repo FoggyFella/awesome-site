@@ -6,6 +6,11 @@ const lowVolumes = ["/FBAR/interrogation","/FBAR/computer"];
     "chains"
   ]
 
+function disableAnimation(){
+  const body = document.querySelector("body");
+  body.style.animation = "none";
+}
+
 function whenLoaded(){
     var links = document.querySelectorAll('a');
 
