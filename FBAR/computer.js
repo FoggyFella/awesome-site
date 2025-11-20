@@ -1,7 +1,7 @@
 
 
 async function check_password(the_attempt){
-    await fetch("https://mypythonworker.hrimar321.workers.dev", {
+    const response = await fetch("https://mypythonworker.hrimar321.workers.dev", {
         method: "POST",
         body: JSON.stringify({
           thething: "checkpass",
@@ -10,5 +10,8 @@ async function check_password(the_attempt){
         headers: {
           "Content-type": "application/json; charset=UTF-8"
         }
-      }).then((response) => console.log(response.body))
+      });
+    
+      const stuff = await response.json();
+      console.log(stuff["result"])
 }
