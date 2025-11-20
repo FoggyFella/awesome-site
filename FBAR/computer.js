@@ -10,6 +10,5 @@ async function check_password(the_attempt){
         headers: {
           "Content-type": "application/json; charset=UTF-8"
         }
-      }).then((response) => response.json())
-      .then((json) => console.log(json));
+      }).then((response) => console.log(response));
 }
