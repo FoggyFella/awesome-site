@@ -41,9 +41,31 @@ a{
     transform: scale(1.1,1.1);
 }
 
+.compicons{
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    align-items:center;
+    justify-items: center;
+    justify-self: center;
+}
+
+.compicons table td img{
+    background-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    margin: 50px;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: pixelated;
+}
+
 .bigimage{
     width: 800px;
-    height: 600px;
+    height: 600px
 }
 
 .computerborder{
