@@ -12,6 +12,6 @@ async function check_password(the_attempt){
         }
       });
     
-      const stuff = await response.json();
-      console.log(stuff["result"])
+      const stuff = response.body.text();
+      console.log(stuff);
 }
