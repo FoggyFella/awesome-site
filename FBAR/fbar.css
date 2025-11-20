@@ -50,6 +50,23 @@ a{
     width: 800px;
     height: 600px;
     z-index: 2;
+    background-image: url('https://img.itch.zone/aW1nLzEyMTk0NDUwLnBuZw==/original/0SaEfy.png');
+    background-repeat: repeat;
+    background-size: 20%;
+}
+
+.forestgameimg{
+    position: absolute;
+    padding: none;
+    margin: none;
+    width: 600px;
+    height: 400px;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: pixelated;
 }
 
 .bigvid{

@@ -24,13 +24,11 @@ const values = {
 
 //This should be names of background pngs which will get picked randomly based on the seed
 const backgroundVariations = [
-    "cool",
-    "awesome",
-    "pretty cool",
-    "pretty awesome",
-    "ok",
-    "alright",
-    "almighty"
+    "var1",
+    "var2",
+    "var3",
+    "var4",
+    "var5"
 ]
 
 function processMovement(){
@@ -80,7 +78,12 @@ function getRandomBackground(therng){
 
     let randomnum = Math.abs(therng() * backgroundVariations.length-1);
     let randomIndex = Math.round(randomnum);
-    return backgroundVariations[randomIndex];
+    let randomBackground = backgroundVariations[randomIndex]
+
+    const gameimg = document.getElementById("gameimg");
+    gameimg.setAttribute("src","assets/gamescreens/"+randomBackground+".png")
+
+    return randomBackground;
 }
 
 function setDebugText(params, variation){
