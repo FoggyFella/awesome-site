@@ -33,15 +33,19 @@ const backgroundVariations = [
 
 //I WILL MOVE THIS TO THE SERVER ONCE IT IS TIME
 //maybe...
+const server_url = "https://mypythonworker.hrimar321.workers.dev"
 const correctPath = "112323";
 const winScreen = "win"
 
-function processMovement(){
+async function processMovement(){
     const myParams = Array.from(new URLSearchParams(window.location.search).keys());
     var theSeed = generateSeed(myParams);
     var myrng = new Math.seedrandom(parseInt(theSeed));
 
     console.log("The current seed is: " + theSeed);
+
+    const results = await checkPath(theSeed);
+
 
     if (reachedEnd(theSeed)){
         const gameimg = document.getElementById("gameimg");
@@ -67,6 +71,23 @@ function processMovement(){
     rightb.params = myParams;
 
     setDebugText(myParams, getRandomBackground(myrng));
+}
+
+async function checkPath(theseed){
+    await fetch(server_url, {
+        method: "POST",
+        body: JSON.stringify({
+          thething: "checkpath",
+          attempt: String(theseed)
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      }).then((response) => response.json())
+      .then((json) => console.log(json));
+
+      console.log(json[0])
+      return json[0];
 }
 
 function reachedEnd(theseed){
