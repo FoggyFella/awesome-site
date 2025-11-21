@@ -74,6 +74,8 @@ async function processMovement(){
 }
 
 async function checkPath(theseed){
+    let thejson
+
     await fetch(server_url, {
         method: "POST",
         body: JSON.stringify({
@@ -84,10 +86,10 @@ async function checkPath(theseed){
           "Content-type": "application/json; charset=UTF-8"
         }
       }).then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) => thejson=json);
 
-      console.log(json[0])
-      return json[0];
+      console.log(thejson[0])
+      return thejson[0];
 }
 
 function reachedEnd(theseed){
