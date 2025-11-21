@@ -31,7 +31,8 @@ const backgroundVariations = [
     "var5"
 ]
 
-const server_url = "https://mypythonworker.hrimar321.workers.dev"
+
+const correct_path = "11123211432212234"
 
 async function processMovement(){
     const myParams = Array.from(new URLSearchParams(window.location.search).keys());
@@ -73,7 +74,7 @@ async function processMovement(){
 async function checkPath(theseed){
     let thejson
 
-    await fetch(server_url, {
+    await fetch("https://mypythonworker.hrimar321.workers.dev", {
         method: "POST",
         body: JSON.stringify({
           thething: "checkpath",
@@ -122,6 +123,8 @@ function setDebugText(params, variation){
 
     const debuglabel = document.getElementById("debug");
     debuglabel.innerText = "";
+    debuglabel.remove();
+    return
 
     if (params.length == 0){
         debuglabel.innerText = "Current path: none";
