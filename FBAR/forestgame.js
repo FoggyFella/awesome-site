@@ -85,8 +85,8 @@ async function checkPath(theseed){
       }).then((response) => response.json())
       .then((json) => thejson=json);
 
-      console.log(thejson[0])
-      return thejson[0];
+      console.log(thejson[0],thejson[1])
+      return thejson;
 }
 
 function generateSeed(params){
