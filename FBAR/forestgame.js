@@ -31,11 +31,7 @@ const backgroundVariations = [
     "var5"
 ]
 
-//I WILL MOVE THIS TO THE SERVER ONCE IT IS TIME
-//maybe...
 const server_url = "https://mypythonworker.hrimar321.workers.dev"
-const correctPath = "112323";
-const winScreen = "win"
 
 async function processMovement(){
     const myParams = Array.from(new URLSearchParams(window.location.search).keys());
@@ -91,15 +87,6 @@ async function checkPath(theseed){
 
       console.log(thejson[0])
       return thejson[0];
-}
-
-function reachedEnd(theseed){
-    if (String(theseed) == correctPath){
-        return true;
-    }
-    else {
-        return false;
-    }
 }
 
 function generateSeed(params){
