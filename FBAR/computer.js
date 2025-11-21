@@ -5,7 +5,8 @@ async function check_password(){
     const loading = document.querySelector(".loadinggif");
     const textfield = document.getElementById("passwordinput");
     const alertfield = document.getElementById("alerttext")
-    let the_attempt = textfield.innerText;
+    let the_attempt = String(textfield.value).toLowerCase();
+    console.log(the_attempt)
     let thejson
 
     passworddiv.style.display = "none";
