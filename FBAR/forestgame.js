@@ -31,12 +31,23 @@ const backgroundVariations = [
     "var5"
 ]
 
+//I WILL MOVE THIS TO THE SERVER ONCE IT IS TIME
+//maybe...
+const correctPath = "112323";
+const winScreen = "win"
+
 function processMovement(){
     const myParams = Array.from(new URLSearchParams(window.location.search).keys());
     var theSeed = generateSeed(myParams);
     var myrng = new Math.seedrandom(parseInt(theSeed));
 
     console.log("The current seed is: " + theSeed);
+
+    if (reachedEnd(theSeed)){
+        const gameimg = document.getElementById("gameimg");
+        gameimg.setAttribute("src","assets/gamescreens/"+winScreen+".png")
+        return;
+    }
 
     const upb = document.getElementById("upbutton");
     const leftb = document.getElementById("leftbutton");
@@ -56,6 +67,15 @@ function processMovement(){
     rightb.params = myParams;
 
     setDebugText(myParams, getRandomBackground(myrng));
+}
+
+function reachedEnd(theseed){
+    if (String(theseed) == correctPath){
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 function generateSeed(params){
