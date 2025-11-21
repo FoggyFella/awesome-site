@@ -45,11 +45,12 @@ async function processMovement(){
     console.log("The current seed is: " + theSeed);
 
     const results = await checkPath(theSeed);
+    const finished = results[0];
+    const imgpath = results[1];
 
-
-    if (reachedEnd(theSeed)){
+    if (finished == true){
         const gameimg = document.getElementById("gameimg");
-        gameimg.setAttribute("src","assets/gamescreens/"+winScreen+".png")
+        gameimg.setAttribute("src","assets/gamescreens/"+imgpath+".png")
         return;
     }
 
