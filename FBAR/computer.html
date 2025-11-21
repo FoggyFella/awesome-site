@@ -2,24 +2,33 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="fbar.css?v=1.0">
-    <script src="main.js?v=1.6"></script>
-    <script src="computer.js?v=1.9"></script>
+    <link rel="stylesheet" href="fbar.css?v=1.2">
+    <script src="main.js?v=1.5"></script>
+    <script src="computer.js?v=2.0"></script>
 </head>
 
-<body onload="whenLoaded();check_password('triffid')">
+<body onload="whenLoaded()">
     THE COMPUTER    
     <div class="imgcontainer">
-        <video autoplay muted class="bigvid" src="assets/computerboot.mp4">
+        <video onended="displayIcons()" autoplay muted class="bigvid" src="assets/computerboot.mp4">
     </div>
 
     <div class="compicons">
         <table>
-            <td id="icon1"><img src="assets/door.png"></td>
-            <td><img src="assets/office.png"></td>
-            <td><img src="assets/office.png"></td>
+            <td class="compicon" id="translator"><a href="desk.html"><img src="assets/computericons/translator.png"></a></td>
+            <td class="compicon" id="forestgame"><a href="forestgame.html"><img src="assets/computericons/forestgame.png"></a></td>
         </table>
     </div>
+
+    <div class="password">
+        <center>ENTER PASSWORD TO UNLOCK DRIVE</center>
+        <p></p>
+        <input id="passwordinput" type="text" maxlength="8">
+        <p></p>
+        <button onclick="check_password()">ENTER</button>
+        <p id="alerttext"></p>
+    </div>    
+    <img class="loadinggif" src="assets/computericons/loading.gif">
 
     <audio id="musicPlayer" preload="auto" autoplay="autoplay">
         <source src="assets/music/indream.mp3" type="audio/mp3">

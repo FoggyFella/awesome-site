@@ -4,13 +4,28 @@
 <head>
     <link rel="stylesheet" href="fbar.css?v=1.0">
     <script src="main.js?v=1.6"></script>
+    <script>
+        function checkDisk(){
+            let diskactive = localStorage.getItem("diskactive");
+            const compimg = document.getElementById("computerimg");
+            const diskbutton = document.getElementById("diskbutton");
+
+            if (diskactive=="true"){
+                compimg.setAttribute("src","assets/computer.png")
+                diskbutton.remove()
+            } else {
+                compimg.setAttribute("src","assets/computer-2.png")
+            }
+        }
+    </script>
 </head>
 
-<body onload="whenLoaded()">
+<body onload="whenLoaded();checkDisk()">
     THE DESK
     <div class="imgcontainer">
-        <a href="computer.html" style="width: 300px; height: 200px; position: absolute; transform: translate(10px,0px);"></a>
-        <img class="bigimage" src="assets/computer.png">
+        <a href="computer.html" style="width: 250px; height: 200px; position: absolute; transform: translate(10px,0px);"></a>
+        <img id="computerimg" class="bigimage" src="assets/computer-2.png">
+        <a id="diskbutton" href="computer.html?diskactivation" style="width: 100px; height: 70px; position: absolute; transform: translate(180px,160px);"></a>
     </div>
     <a class="linkback" href="main.html">↓</a>
      <audio id="musicPlayer" preload="auto" autoplay="autoplay">

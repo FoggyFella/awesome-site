@@ -48,19 +48,27 @@ a{
     align-items:center;
     justify-items: center;
     justify-self: center;
+    transform: translate(10px,-355px);
 }
 
 .compicons table td img{
-    background-color: blueviolet;
+    background-color: transparent;
     width: 50px;
     height: 50px;
-    margin: 50px;
+    margin: 30px;
     image-rendering: -moz-crisp-edges;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
     -ms-interpolation-mode: nearest-neighbor;
     image-rendering: pixelated;
+    filter: drop-shadow(0 0 10px rgb(146, 219, 126));
+}
+
+.compicon{
+    opacity: 0;
+    background-color: transparent;
+    display: none;
 }
 
 .bigimage{
@@ -75,6 +83,63 @@ a{
     background-image: url('https://img.itch.zone/aW1nLzEyMTk0NDUwLnBuZw==/original/0SaEfy.png');
     background-repeat: repeat;
     background-size: 20%;
+}
+
+.password{
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(146, 219, 126);  
+    filter: drop-shadow(0 0 10px rgb(146, 219, 126));
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    transform: translate(-170px,-335px);
+    display: none;
+    opacity: 0;
+}
+
+.loadinggif{
+    display: inline-block;
+    position: absolute;
+    transform: translate(-85px,-380px);
+    filter: drop-shadow(0 0 5px rgb(146, 219, 126));
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.password button{
+    border: solid;
+    border-radius: 2px;
+    border-color: rgb(146, 219, 126);
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: rgb(146, 219, 126);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.password button:hover{
+    border: dotted;
+}
+
+.password input{
+    border: solid;
+    border-radius: 2px;
+    border-color: rgb(146, 219, 126);
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: rgb(146, 219, 126);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.password input:focus{
+    outline: none;
 }
 
 .forestgameimg{
