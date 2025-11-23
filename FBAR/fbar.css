@@ -158,6 +158,19 @@ a{
     font-size: 20px;
 }
 
+.alientext{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    position: absolute;
+    padding: 10px;
+    max-width: 400px;
+    overflow: hidden;
+    transform: translate(200px,-200px);
+}
+
 .translate-opt{
     display: inline-block;
     position: absolute;

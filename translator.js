@@ -150,6 +150,7 @@ function translate_text_into_lang(){
     const textElement = document.getElementById("texttolang")
     var text = textElement.value
     var the_secret = get_random_secret_encoded()
+    the_secret = "triffid"
     var secret_as_emojis = cipherwords[the_secret]
 
     console.log(text)

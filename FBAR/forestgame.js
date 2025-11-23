@@ -145,12 +145,13 @@ function setDebugText(params, variation){
 
 function move(evt){
     //Gets called when you press a movement key
-
+    const beep = document.getElementById("beep")
     const buttonlabel = translations[evt.currentTarget.innerText];
     const params = evt.currentTarget.params;
     const lastinput = params.at(params.length-1);
 
     var new_text = "?";
+    beep.play();
 
     if (params.length >= 1){;
         if (opposites[lastinput] == buttonlabel){

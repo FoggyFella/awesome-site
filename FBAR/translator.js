@@ -132,6 +132,11 @@ async function translateTheStuff(){
     showResult(true);
 }
 
+function playBeep(){
+    const beep = document.getElementById("beep")
+    beep.play();
+}
+
 function showLoading(yeah){
     const results = document.getElementById("resultspage");
     const main = document.getElementById("mainpage");
@@ -149,6 +154,7 @@ function showLoading(yeah){
 function showResult(yeah){
     const results = document.getElementById("resultspage");
     const main = document.getElementById("mainpage");
+    playBeep();
 
     if (yeah){
         main.style.display = "none";
