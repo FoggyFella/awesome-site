@@ -83,6 +83,7 @@ a{
     background-image: url('https://img.itch.zone/aW1nLzEyMTk0NDUwLnBuZw==/original/0SaEfy.png');
     background-repeat: repeat;
     background-size: 20%;
+    pointer-events: none;
 }
 
 .password{
@@ -110,7 +111,7 @@ a{
     pointer-events: none;
 }
 
-.password button{
+.coolbutton{
     border: solid;
     border-radius: 2px;
     border-color: rgb(146, 219, 126);
@@ -122,7 +123,7 @@ a{
     text-align: center;
 }
 
-.password button:hover{
+.coolbutton:hover{
     border: dotted;
 }
 
@@ -136,6 +137,100 @@ a{
     color: rgb(146, 219, 126);
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+}
+
+.cooltextarea{
+    outline: none;
+    background-color: transparent;
+    border: solid;
+    border-radius: 2px;
+    border-color: rgb(146, 219, 126);
+    resize: none;
+    font-size: 20px;
+    color: rgb(146, 219, 126);
+    font-family: 'Courier New', Courier, monospace;
+    width: 450px;
+    display: inline-block;
+}
+
+.cooltextarea::placeholder{
+    color: rgb(146, 219, 126);
+    font-size: 20px;
+}
+
+.translate-opt{
+    display: inline-block;
+    position: absolute;
+    filter: drop-shadow(0 0 8px rgb(146, 219, 126));
+    justify-items: center;
+    justify-content: center;
+}
+
+.dropbtn{
+    outline: none;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    background-color: transparent;
+    border: solid;
+    border-radius: 2px;
+    border-color: rgb(146, 219, 126);
+    color: rgb(146, 219, 126);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dropbtn:hover{
+    transform: scale(1.1);
+}
+
+.colormenu{
+    color: antiquewhite;
+    position: absolute;
+    display: none;
+}
+
+.colormenu button{
+    display: block;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: rgb(146, 219, 126);
+    background-color: transparent;
+    border: solid;
+    border-radius: 2px;
+    border-color: rgb(146, 219, 126);
+}
+
+.colormenu button:hover{
+    transform: scale(1.1);
+}
+
+.dropbtn:hover .colormenu {display: inline-block;}
+
+#inputarea{
+    outline: none;
+    background-color: transparent;
+    border: solid;
+    border-radius: 2px;
+    border-color: rgb(146, 219, 126);
+    resize: none;
+    font-size: 15px;
+    color: rgb(146, 219, 126);
+    font-family: 'Courier New', Courier, monospace;
+    height: 18px;
+    width: 100px;
+    overflow: hidden;
+}
+
+#inputarea::placeholder{
+    color: rgb(146, 219, 126);
+    font-size: 15px;
+}
+
+.bigskip{
+    padding-left: 50px;
 }
 
 .password input:focus{

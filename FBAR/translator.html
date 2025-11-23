@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="fbar.css?v=1.6">
+    <script src="main.js?v=1.6"></script>
+    <script src="translator.js"></script>
+    <script src="../seedrandom.min.js"></script>
+</head>
+
+<body onload="whenLoaded()">
+    TRANSLATOR
+    <div class="imgcontainer">
+        <img class="computerborder" src="assets/border.png">
+
+        <div id="mainpage" class="translate-opt" style="display: inline-block">
+            <textarea id="translatearea" class="cooltextarea" placeholder="[TEXT TO TRANSLATE]"></textarea>
+
+            <table>
+                <td><textarea id="inputarea" maxlength="10" placeholder="[KEY]"></textarea></td>
+                <td class="bigskip"></td>
+                <td>
+                    <button class="dropbtn">GR</button>
+                    <div class="colormenu">
+                        <button>GR</button>
+                        <button>BL</button>
+                        <button>B</button>
+                    </div>
+                </td>
+                <td>
+                    <button class="dropbtn">BL</button>
+                    <div class="colormenu">
+                        <button>WH</button>
+                        <button>PU</button>
+                        <button>BR</button>
+                    </div>
+                </td>
+                <td>
+                    <button class="dropbtn">GR</button>
+                    <div class="colormenu">
+                        <button>YL</button>
+                        <button>RE</button>
+                        <button>OR</button>
+                    </div>
+                </td>
+            </table>
+            <p>ㅤ</p>
+            <button class="coolbutton" onclick="translateTheStuff()">ENTER</button>
+        </div>
+
+        <div id="resultspage" class="translate-opt" style="display: none">
+            <textarea id="resultarea" class="cooltextarea" readonly placeholder="[RESULT]" style="height: 200px;transform: translate(0px,50px);"></textarea>
+            <p>ㅤ</p>
+            <button onclick="showResult(false)" id="retrybtn" class="coolbutton" style="transform: translate(0px,-30px);">TRY AGAIN</button>
+        </div>
+    </div>
+    
+    <img class="loadinggif" src="assets/computericons/loading.gif">
+    <a class="linkback" href="desk.html">↓</a>
+
+    <audio preload="auto" autoplay="autoplay" loop="loop">
+        <source src="assets/soundfx/computerfan.mp3" type="audio/mp3">
+    </audio>
+</body>
+
+</html>

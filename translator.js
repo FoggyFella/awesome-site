@@ -99,9 +99,11 @@ function get_random_secret_encoded(){
 }
 
 function shuffle(array,seed) {
+  console.log("TEST STUFF");
   var myrng = new Math.seedrandom(seed);
 
   let currentIndex = array.length;
+    console.log(currentIndex);
 
   while (currentIndex != 0) {
 
@@ -111,6 +113,7 @@ function shuffle(array,seed) {
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]];
   }
+  console.log(array);
 }
 
 function unshuffle(array, seed) {
@@ -215,6 +218,8 @@ function translate_lang_into_text(){
     
     if (split_text.length != 1){
         var the_secret = split_text[1].trim().toLowerCase()
+        console.log("the secret is:")
+        console.log(the_secret)
         console.log(translated_text.length)
         console.log(translated_text);
         let unshuffled_string = Array.from(translated_text);
