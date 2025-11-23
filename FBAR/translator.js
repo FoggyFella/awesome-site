@@ -124,10 +124,26 @@ async function translateTheStuff(){
     console.log(text);
     console.log(seq);
 
+    showLoading(true);
     const results = document.getElementById("resultarea");
     results.value = await translate_lang_into_text(text,key,seq);
+    showLoading(false);
 
     showResult(true);
+}
+
+function showLoading(yeah){
+    const results = document.getElementById("resultspage");
+    const main = document.getElementById("mainpage");
+    const loading = document.querySelector(".loadinggif");
+
+    if (yeah){
+        results.style.display = "none";
+        main.style.display = "none";
+        loading.style.opacity = 1;
+    } else {
+        loading.style.opacity = 0;
+    }
 }
 
 function showResult(yeah){
@@ -191,7 +207,7 @@ async function translate_lang_into_text(text,key,seq){
         let match = await doItMatch(key,seq);
         var the_secret = split_text[1].trim().toLowerCase()
         if (!match){
-            the_secret = "elincorrecto"
+            the_secret = String(Math.random()*100.0)
         }
         let unshuffled_string = Array.from(translated_text);
         unshuffle(unshuffled_string,the_secret)
