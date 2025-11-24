@@ -183,6 +183,15 @@ button:hover{
     justify-content: center;
 }
 
+.header{
+    padding: 0px;
+    margin: 10px;
+}
+
+.fileimage{
+    max-width: 450px;
+}
+
 .dropbtn{
     outline: none;
     width: 30px;

@@ -2,20 +2,33 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="fbar.css?v=1.0">
+    <link rel="stylesheet" href="fbar.css?v=1.2">
     <script src="main.js?v=1.6"></script>
+    <script src="files.js?v=1.2"></script>
 </head>
 
-<body>
-    THE FILES
-    <div class="imgcontainer">
-        <img id="computerimg" class="bigimage" src="assets/computer-2.png">
-        <div class="horizontalcont">
+<body onload="whenLoaded();setupStuff(true)">
+    <p class="header" id="filename">FILE №2323</p>
+
+    <div id="mainpage" class="imgcontainer">
+        <img id="coverimage" class="fileimage" src="assets/file/filePH.png">
+        <div class="horizontalcont" style="width: 1200px;">
             <button id="leftbutton" class="leftkey">←</button>
             <button id="rightbutton" class="rightkey">→</button>
         </div>
+        <button onclick="showFile()" style="width: 400px; height: 500px; position: absolute; transform: translate(0px,0px); opacity: 0;"></button>
     </div>
-    <a class="linkback" href="desk.html">↓</a>
+
+    <div id="file1" class="imgcontainer" style="display: none;">
+        <img id="coverimage" class="fileimage" src="assets/file/paperPH.png" style="max-width: 600px;">
+    </div>
+
+    <div id="file2" class="imgcontainer" style="display: none;">
+        <img id="coverimage" class="fileimage" src="assets/file/paperPH.png" style="max-width: 600px;">
+    </div>
+
+    <button id="outOfFile" class="linkback" onclick="showFile(false)" style="display: none;">↓</button>
+    <a id="linkToDesk" class="linkback" href="desk.html">↓</a>
     <audio id="musicPlayer" preload="auto" autoplay="autoplay">
         <source src="assets/music/indream.mp3" type="audio/mp3">
     </audio>

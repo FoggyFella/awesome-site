@@ -15,6 +15,7 @@
                 diskbutton.remove()
             } else {
                 compimg.setAttribute("src","assets/computer-2.png")
+                diskbutton.style.display = "inline-block"
             }
         }
     </script>
@@ -26,7 +27,7 @@
         <a href="computer.html" style="width: 250px; height: 200px; position: absolute; transform: translate(10px,0px);"></a>
         <a href="files.html" style="width: 130px; height: 100px; position: absolute; transform: translate(-270px,120px);"></a>
         <img id="computerimg" class="bigimage" src="assets/computer-2.png">
-        <a id="diskbutton" href="computer.html?diskactivation" style="width: 100px; height: 70px; position: absolute; transform: translate(180px,160px);"></a>
+        <a id="diskbutton" href="computer.html?diskactivation" style="width: 100px; height: 70px; position: absolute; transform: translate(180px,160px); display: none;"></a>
     </div>
     <a class="linkback" href="main.html">↓</a>
      <audio id="musicPlayer" preload="auto" autoplay="autoplay">
