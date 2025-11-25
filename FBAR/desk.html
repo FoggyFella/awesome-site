@@ -3,14 +3,16 @@
 
 <head>
     <link rel="stylesheet" href="fbar.css?v=1.2">
-    <script src="main.js?v=1.6"></script>
-    <script>
+    <script src="main.js?v=1.7"></script>
+    <script type="module">
+        import {isPasswordRight} from "./main.js"
+
         function checkDisk(){
-            let diskactive = localStorage.getItem("diskactive");
+            let diskactive = isPasswordRight();
             const compimg = document.getElementById("computerimg");
             const diskbutton = document.getElementById("diskbutton");
 
-            if (diskactive=="true"){
+            if (diskactive){
                 compimg.setAttribute("src","assets/computer.png")
                 diskbutton.remove()
             } else {

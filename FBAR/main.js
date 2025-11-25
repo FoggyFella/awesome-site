@@ -86,3 +86,29 @@ function getCookie(cname) {
   }
   return "null";
 }
+
+async function isPasswordRight(){
+    const the_attempt = localStorage.getItem("inputtedPassword");
+
+    if (the_attempt == null){
+      return false;
+    }
+
+    let thejson
+
+    await fetch("https://mypythonworker.hrimar321.workers.dev", {
+        method: "POST",
+        body: JSON.stringify({
+          thething: "checkpass",
+          attempt: the_attempt
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      }).then((response) => response.json())
+      .then((json) => thejson=json);
+
+      console.log(thejson)
+
+    return thejson;
+}
