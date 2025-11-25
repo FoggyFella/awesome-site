@@ -27,8 +27,8 @@ async function check_password(){
       console.log(thejson)
     
     if (thejson == true){
-      localStorage.setItem("diskactive","true");
-      //localStorage.setItem("inputtedPassword",the_attempt);
+      //localStorage.setItem("diskactive","true");
+      localStorage.setItem("inputtedPassword",the_attempt);
       window.location.href = "forestgame.html"
     } else {
       passworddiv.style.display = "inline-block";
