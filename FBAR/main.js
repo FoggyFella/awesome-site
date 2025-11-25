@@ -87,7 +87,7 @@ function getCookie(cname) {
   return "null";
 }
 
-export async function isPasswordRight(){
+async function isPasswordRight(){
     const the_attempt = localStorage.getItem("inputtedPassword");
 
     if (the_attempt == null){
