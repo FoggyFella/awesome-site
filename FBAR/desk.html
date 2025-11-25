@@ -6,10 +6,11 @@
     <script src="main.js?v=1.9"></script>
     <script>
         function checkDisk(yeah){
+            let diskactive = localStorage.getItem("diskactive");
             const compimg = document.getElementById("computerimg");
             const diskbutton = document.getElementById("diskbutton");
 
-            if (!yeah){
+            if (diskactive=="true"){
                 compimg.setAttribute("src","assets/computer.png")
                 diskbutton.remove()
             } else {
@@ -20,7 +21,7 @@
     </script>
 </head>
 
-<body onload="whenLoaded();checkDisk(await checkPassword())">
+<body onload="whenLoaded();checkDisk()">
     THE DESK
     <div class="imgcontainer">
         <a href="computer.html" style="width: 250px; height: 200px; position: absolute; transform: translate(10px,0px);"></a>
