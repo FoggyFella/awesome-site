@@ -5,10 +5,10 @@ const dialogue = [
 ];
 
 const audioFiles = [
-    "assets/soundfx/alien1.m4a",
-    "assets/soundfx/alien2.m4a",
-    "assets/soundfx/alien3.m4a",
-    "assets/soundfx/alien3.m4a"
+    "assets/soundfx/alien1.mp3",
+    "assets/soundfx/alien2.mp3",
+    "assets/soundfx/alien3.mp3",
+    "assets/soundfx/alien4.mp3"
 ]
 
 let currentIndex = -1;
