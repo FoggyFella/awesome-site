@@ -40,6 +40,13 @@ async function processMovement(){
     var myrng = new Math.seedrandom(parseInt(theSeed));
 
     console.log("The current seed is: " + theSeed);
+    
+    const diskactive = localStorage.getItem("diskactive");
+    if (diskactive!="true"){
+        const gameimg = document.getElementById("gameimg");
+        gameimg.setAttribute("src","assets/gamescreens/notfound.png")
+        return;
+    }
 
     const results = await checkPath(theSeed);
     const finished = results[0];

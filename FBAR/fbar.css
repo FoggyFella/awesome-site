@@ -143,6 +143,10 @@ button:hover{
     text-align: center;
 }
 
+#gameimg{
+    filter: drop-shadow(0 0 70px rgb(146, 219, 126));
+}
+
 .cooltextarea{
     outline: none;
     background-color: transparent;
