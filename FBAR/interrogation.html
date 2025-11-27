@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="fbar.css?v=1.1">
+    <link rel="stylesheet" href="fbar.css?v=4.0">
     <script src="main.js?v=1.6"></script>
-    <script src="interrogation.js"></script>
+    <script src="interrogation.js?v=1.2"></script>
 </head>
 
 <body onload="whenLoaded()"> 
@@ -24,6 +24,10 @@
     </audio>
     <audio preload="auto" loop="loop" autoplay="autoplay">
         <source src="assets/soundfx/AC.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="sound" preload="auto">
+        <source src="assets/soundfx/alien1.m4a" type="audio/m4a">
     </audio>
 
     <button onclick="playDialogue()" style="width: 300px; height: 300px; position: absolute; transform: translate(-150px,-450px); opacity: 0;"></button>
