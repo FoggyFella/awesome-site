@@ -41,6 +41,20 @@ a{
     transform: scale(1.1,1.1);
 }
 
+.creditThing{
+    padding: 0px;
+    margin: 0px;
+    font-weight: 100;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.creditThing a{
+    color: white;
+    text-decoration: none;
+}
+
 .compicons{
     display: inline-block;
     position: absolute;
