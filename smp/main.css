@@ -1,0 +1,23 @@
+body{
+    color: white;
+    background-color: black;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    animation: fadein 0.5s;
+}
+
+.imgcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    background-color: transparent;
+}
+
+.bigimage{
+    width: 60%;
+}
