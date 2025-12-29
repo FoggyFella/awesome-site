@@ -1,6 +1,5 @@
 async function checkPassword(){
-    const thePassword = String(document.getElementById("passwordinput").value);
-    const thePart = "1";
+    const thePassword = String(document.getElementById("passwordinput").value).toLowerCase();
 
     let thejson
 
@@ -8,8 +7,7 @@ async function checkPassword(){
         method: "POST",
         body: JSON.stringify({
           thething: "smpcheck",
-          password: thePassword,
-          part: thePart
+          password: thePassword
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
