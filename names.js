@@ -35,7 +35,7 @@ function writenames(names){
         setProperty(mything,"--charindex",the_id)
 
         if (the_id > 5){
-            the_speed *= 0.9
+            the_speed *= 0.95
         }
 
         setProperty(mything,"--speed",the_speed)

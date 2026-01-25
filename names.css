@@ -161,9 +161,9 @@ h1{
 }
 
 .namecontainer p{
-    animation: appeartext calc(1s*(var(--speed))) ease-out;
+    animation: appeartext 1s ease-out;
     opacity: 0;
-    animation-delay: calc(0.5s * var(--charindex));
+    animation-delay: calc((0.5s * var(--charindex))*var(--speed));
     animation-fill-mode: forwards;
     transition: all 0.3s;
 }
