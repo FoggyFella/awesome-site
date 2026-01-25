@@ -17,6 +17,7 @@ function writenames(names){
     const container = document.getElementById("namecontainer");
     var unique_names = []
     var the_id = 0
+    var the_speed = 1
     var plus = true
     for (user in names){
         const userdata  = names[user]
@@ -33,6 +34,11 @@ function writenames(names){
         mything.appendChild(node)
         setProperty(mything,"--charindex",the_id)
 
+        if (the_id > 5){
+            the_speed *= 0.9
+        }
+
+        setProperty(mything,"--speed",the_speed)
 
         container.appendChild(mything)
         the_id += 1
