@@ -113,6 +113,22 @@ h1{
     border-color: rgb(248, 241, 214);
     border-width: 5px;
     border-style: solid;
+    width: 90%;
+    max-width: 500px;
+}
+
+.verticalimg{
+    border-radius: 10px;
+    border-color: rgb(248, 241, 214);
+    border-width: 5px;
+    border-style: solid;
+    height: 90%;
+    max-height: 300px;
+}
+
+.noborderimg{
+    width: 90%;
+    max-width: 500px;
 }
 
 .secret{
