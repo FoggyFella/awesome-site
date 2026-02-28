@@ -47,7 +47,7 @@ section {
 
 a{
     color: inherit;
-    text-decoration: none;
+    text-decoration:underline;
     transform: scale(1.0);
 }
 
@@ -159,4 +159,9 @@ nav ul li img{
 
 nav ul li img:hover{
     transform: scale(1.3);
+}
+
+glow{
+    color: rgb(242, 204, 14);
+    text-shadow: 0 0 10px #ffffffad, 0 0 20px #ffd014, 0 0 30px #ffd014
 }

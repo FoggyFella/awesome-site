@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Issue</title>
+    <link rel="stylesheet" href="style.css?v=1.4">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/star.png">
+
+    <meta content="Issue 2" property="og:title">
+    <meta content="Second issue of the monthly wizard fella newletter!!!" property="og:description">
+    <meta content="https://foggydude.dev/wizardfella/assets/logo.png" property="og:image">
+</head>
+
+<body>
+    <a href="index.html"><center><img class="logo" src="assets/logo.png" alt="Wizard fella logo" width="300px"></center></a>
+    <p></p>
+    <section>
+        <p>Hello and welcome to the second issue of the monthly Wizard Fella Islands newsletter!!!</p>
+        <p>It was a short month, however I still got some new things to show you!</p>
+    </section>
+
+    <h1 class="rotatedText2">BIG DREAMS</h1>
+    <section class="leftalign">
+        <p>Since last month I've been working on the first part of this Island and now I can proudly say it's <glow>done!</glow></p>
+    </section>
+    <p><img src="assets/issue2/level1.png" alt="Screenshot of big dreams (Part 1)" class="borderimg"></p>
+    <p class="smalltext">The very start of the level</p>
+    <p><img src="assets/issue2/level3.png" alt="Screenshot of big dreams (Part 2)" class="borderimg"></p>
+    <p class="smalltext">First challenge</p>
+    <p><img src="assets/issue2/level4.png" alt="Screenshot of big dreams (Part 3)" class="borderimg"></p>
+    <p class="smalltext">Learning attacks</p>
+    <section class="leftalign">
+        <p>
+            Besides making assets to replace the grey boxes, I've also done a few playtests that helped me find bugs and issues that the original layout had.
+            The second part of this Island is supposed to be a challenge, where you have to complete it under a certain time. 
+            I will try to work on completing the layout of this next part over the following month.
+        </p>
+    </section>
+    <p></p>
+
+    <h1 class="rotatedText">CONTROLLER SUPPORT</h1>
+    <section class="leftalign">
+        <p>Up until now you could only play the game with mouse and keyboard, but now the game is now fully* playable using any common controller</p>
+        <p class="smalltext">*I didn't add camera zoom in/out mappings for controllers yet because I have no idea which keys that should be</p>
+    </section>
+    <p><img src="assets/issue2/controllertest.gif" alt="Me testing controller input" class="borderimg"></p>
+    <p class="smalltext">Me testing controller input using a controller app on my phone</p>
+    <section class="leftalign">
+        <p>
+            Yes I don't have a real controller to test this with but if this works then the real thing HAS to work.
+        </p>
+        <p>
+            In addition, I made dynamic Action Prompts which display the key for an action based on your current device
+        </p>
+        <p class="smalltext">
+            Shoutout to <a href="https://kenney.nl">KenneyNL</a> for the icons!
+        </p>
+    </section>
+    <p><img src="assets/issue2/dynamicPrompts.gif" alt="Dynamic Action Prompts" class="borderimg"></p>
+    <p class="smalltext">Dynamic Action Prompts</p>
+    <section class="leftalign">
+        <p>While on the topic of inputs, I'd like to add the ability to remap actions at some point but that might just have to wait until...</p>
+    </section>
+    <p></p>
+
+    <h1 class="rotatedText2">THE DIARY</h1>
+    <section class="leftalign">
+        <p>I said last month that I'd work on the Diary and I did. However it has proved to be quite a challenge.
+            <br>
+            You see, in the previous game the diary was just a 2d UI element, but this time I want it to be a 3d model because it looks cooler.
+            <br>
+            But that means I have to put interactive 2d pages on a 3d model and then put that 3d model over the screen. Which turns out to be quite convoluted.
+        </p>
+    </section>
+    
+    <p><img src="assets/issue2/diaryProto.gif" alt="Prototype of the diary" class="borderimg"></p>
+    <p class="smalltext">Prototype of the diary</p>
+
+    <section class="leftalign">
+        <p>Here you can see a very rough proof of concept I did for the diary. It works for now so hopefully I can finish it by next month.</p>
+    </section>
+    <p></p>
+
+    <h1 class="rotatedText">MINOR CHANGES</h1>
+
+    
+    <section class="leftalign">
+        <p>
+            <b>Dialogue</b><br><br>
+            I found a way to overcome the problems I mentioned in the last issue so I added three new BBCode effects
+        </p>
+    </section>
+    <p><img src="assets/issue2/rainbowEfffect.gif" alt="image of rainbow BBCode Effect" class="verticalimg"></p>
+    <p class="smalltext">BBCode Rainbow Effect</p>
+    <p><img src="assets/issue2/waveEffect.gif" alt="image of color wave Effect" class="verticalimg"></p>
+    <p class="smalltext">BBCode Wave Effect</p>
+    <p><img src="assets/issue2/actionEffect.gif" alt="image of color action prompt Effect" class="verticalimg"></p>
+    <p class="smalltext">BBCode Action Prompt Effect</p>
+    <br>
+
+    <section class="leftalign">
+        <p>
+            <b>Water</b><br><br>
+            Water now has an underwater effect that gets applied to the screen
+        </p>
+    </section>
+    <p><img src="assets/issue2/waterEffect.gif" alt="Underwater Effect" class="verticalimg"></p>
+    <p class="smalltext">Underwater Effect</p>
+    <br>
+
+    
+    <section class="leftalign">
+        <p>
+            <b>Saving</b><br><br>
+            There is now a system in place to save and load data in the game
+        </p>
+    </section>
+    <p><img src="assets/issue2/savedThingy.png" alt="Saved Thingy" class="verticalimg"></p>
+    <p class="smalltext">Collecting a thingy that you've found before</p>
+    <p><img src="assets/issue2/saveData.png" alt="The inside of a save file" class="verticalimg"></p>
+    <p class="smalltext">The inside of a save file</p>
+    <section class="leftalign">
+        <p>
+            It's probably something that will receive small changes as I find out new things that need to be saved.
+            <br>
+            Oh and also there is no settings yet so that might be something I'll work on next month.
+        </p>
+    </section>
+
+    <p class="skip"></p>
+    <section>
+        <p>And that's it for now! I didn't find a place to put this, but I'd also like to work on more interesting props next month (like the cannons or bounce pads) because I think that will be necessary for making interesting levels.</p>
+        <p>Thank you for reading and until next time!!!</p>
+        <p class="smalltext">PS: Let me know if you'd like to hear about more in-progress things like The Diary</p>
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://discord.com/invite/keyTzMFJsX"><img src="assets/discord.png" alt="Discord Logo"></a></li>
+                <li><a href="https://www.twitter.com/WizardFellaGame"><img src="assets/twitter.png" alt="Twitter Logo"></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <p class="secret"><img src="assets/issue2/oneexplison.gif"></p>
+    <p class="smalltext">NOOOOOOOOOOOOOOO</p>
