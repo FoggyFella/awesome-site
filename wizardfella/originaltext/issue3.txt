@@ -1,0 +1,79 @@
+Hello again to welcome to the third issue of the Wizard Fella Islands newsletter!!!
+There's a bunch of new things to show so I'll get straight into it
+
+-BIG DREAMS : PART 2
+I will start out with Big Dreams as usual, however in comparising to last month this one might be dissapointing 
+As mentioned in the last issue, the second part is a level where you have a limited amount of time to complete it
+Here is how it looks like so far...
+[SMALL DREAMS IMG]
+[SPACE]
+[THERE IS NO WAY THATS IT IMG]
+Sadly that is actually it for the level because I spent time on other things instead
+I did make an intro for it though
+[INTRO GIF]
+Over the next month I want to actually commit to working on the layout of this part instead of making more features.
+And speaking of features here's...
+
+-TIMER
+I made a timer dispay specifically for the Big Dreams part 2, but I can already think of a few more uses for it
+[TIMER GIF]
+If changes color and cracks at 50% and 20% to hopefully make you more aware that time is running out
+
+-DIARY
+Probably the most exciting thing I worked on this month is The Diary. After first mentioning it in the first issue it is now done*
+[DIARY GIF]
+The Diary serves as the pause and settings menu but also as a way for you to check your progress
+[DIARY RENDER IMG]
+It will update as you play through the game with new pages for the places you visit and thingys you find!
+A thing I think deserves a mention is that The Diary is navigatable with a controller aswell which doesnt't sound like a huge achievement but I did have to change a lot of stuff for it to work.
+
+*When I say done I mean that most features are made for it and all that's left is to fill it with content :)
+oh and also i need to make the "remap controls" button do something
+
+-STARS
+Stars are collectibles similar to coins in most other games and will be spendable on things like cosmetics
+[STARS GIF]
+I think they can also help with level design by making paths out of them (I probably heard this in some video 3 years ago)
+
+-MOVING PLATFORMS
+Moving Platforms just move based on the specified path, could be used for some fun challenges
+[MOVING PLATFORMS GIF]
+
+
+-CHARGE PADS
+Charge Pads are a new prop very similar to normal Bounce Pads
+[CHarge PAds GIF]
+Unlike bounce pads though, you need to stand on them for a bit and it will launch you based on your position from the center of the pad
+They do feel a little unintuitive right now, so I'll try to think of ways to improve on them
+
+-MINOR CHANGES
+
+Dialogue
+
+Choices
+There is now finally the option to have dialogue choices
+[CHOICES GIF]
+It's something that I've put off for a while but finally decided to make because I realised that it was needed for Big Dreams part 2
+	
+
+Multiple Character Support
+Up until now, dialogue was only ever betweeen two characters, one of which would be the player. 
+But now I can make dialogue with as many characters as I want.
+[CHARACTERS GIF]
+I think this will be pretty useful for making some fun dialogue in the game
+
+UI
+
+Level Info
+The Level Info displays the name of the island you are, name of the part and number of the part
+[LEVEL INFO GIF]
+These are already used in Big Dreams and make the game feel more polished/finished/cool
+
+Cinematic Bars
+These are just black bars that appear during dialogues and cutscenes
+[BARS IN PIC] 
+Like the Level Info these just make the game feel more polished
+
+
+That's it for this month! Hopefully I will have a bunch more stuff to show next month but I might be a bit busy with studying.
+Thank you for reading and until next time!!!
