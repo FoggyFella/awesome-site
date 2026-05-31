@@ -87,6 +87,11 @@ h1{
     margin-right: 800px;
     padding-top: 20px;
     padding-bottom: 10px;
+    transition: all ease-in-out 0.2s;
+}
+
+.rotatedText.in-view{
+    font-size: 30px;
 }
 
 .rotatedText2{
@@ -99,6 +104,11 @@ h1{
     margin-right: 800px;
     padding-top: 20px;
     padding-bottom: 10px;
+    transition: all ease-in-out 0.2s;
+}
+
+.rotatedText2.in-view{
+    font-size: 30px;
 }
 
 .smalltext{
@@ -163,5 +173,47 @@ nav ul li img:hover{
 
 glow{
     color: rgb(242, 204, 14);
-    text-shadow: 0 0 10px #ffffffad, 0 0 20px #ffd014, 0 0 30px #ffd014
+    text-shadow: -1px -1px 0 #7e2e04, 1px -1px 0 #7e2e04, -1px 1px 0 #7e2e04, 1px 1px 0 #7e2e04;
+    animation: rotateSmall 5s infinite ease-in-out;
+    display: inline-block;
+}
+
+.floatingText{
+    position: absolute;
+    text-align: center;
+    left: 80%;
+    top: -5px;
+    text-shadow: 0 0 5px #ff271456, 0 0 5px #ff271456, 0 0 5px #ff271456;
+    color: rgb(255, 0, 72);
+    animation: rotate 2s infinite ease-in-out;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes rotateSmall {
+    0%{
+        transform: rotate(-3deg);
+    }
+    50%{
+        transform: rotate(3deg);
+    }
+    100%{
+        transform: rotate(-3deg);
+    }
+}
+
+.winkImg{
+    width: 300px;
+    position: absolute;
+    left: 2%;
 }

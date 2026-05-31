@@ -1,0 +1,70 @@
+Welcome back to the Wizard Fella newsletter! This is the fifth(5)(V) issue.
+There's a bunch of new stuff so here we go
+
+-BIG DREAMS : PART 2
+Last month I finished the graybox of this level and this month it is fully ready!
+
+[BIG DREAMS PART 2 IMG 1]
+[BIG DREAMS PART 2 IMG 2]
+[BIG DREAMS PART 2 IMG 3]
+
+The biggest modification from the graybox (besides assets) was that I included some signs that explain the new props that you encounter.
+Overall I'm really proud of how this level turned out both visually and gameplay wise.
+I have also begun work on Part 3, however I've decided to not reveal much about it since it's something thats probably better experienced blindly :)
+
+[BIG DREAMS PART 3 LOSE WAND GIF]
+
+-GRABBABLES
+
+Grabbables are a new type of object that you can... grab.
+[GRABBABLES IN ACTION GIF]
+You can also throw them by pressing E, or hold it to throw them further!
+A little cool technical thing is that I can modify the arm distance for each grabbable, so that arms adjust for bigger/smaller objects.
+[GRABBING SMALL AND THEN BIG OBJECT GIF]
+
+-BUTTONS
+
+Buttons are a new prop that could be used for puzzles and stuff.
+[BUTTONS IN ACTION GIF]
+As seen above, they can be grouped together to create a circuit.
+I can also set them to accept only the player or only grabbables or both!
+They also can be configured into a switch or a timer!
+[BUTTON TIMER AND BUTTON SWITCH GIF]
+Since buttons work using Godot's signal system I can pretty much connect them to anything so I'm already thinking of some interesting puzzle ideas.
+
+-HEALTH STUFF
+
+This is something that I've ignored for a while but there's finally UI to display your health
+[HEART GIF]
+I've also added a heal item, a nice red apple
+[APPLE GIF]
+I'm still not sure if apples will stay as the general heal item but it's fine for now
+
+
+-MINOR CHANGES
+
+Focus Points
+Focus points have been modified to have priority. Focus points with bigger priority will be activated even if a smaller priority is closer to the player.
+I'll be using this so that NPC's have bigger priority than something like Grabbables.
+[FOCUS POINT HOG GIF]
+
+Star Checkpoints
+Up until now there was no real checkpoints in the game. It just saved your position every 10 seconds. 
+While I did like the auto save it often led to issues and I feel like players were just unsure where they would respawn.
+I added Star Checkpoints which light up once they are active and save your position.
+[STAR CHECKPOINT GIF]
+
+Slipping
+This month I introduced slipping. The player will slip if the floor below is above 45 degrees.
+If you're idle this will mean you will just start sliding down but if you're running your speed will keep getting slower and slower until you eventually enter a Slide.
+[SLIPPING GIF]
+
+
+This month I finally worked on some things that I've had on the todo list for a while so I'm pretty happy
+For this next month the priority is to keep working on Part 3 but maybe I could also start working on the next island, Maple Isle
+Ok that's all for now, see you next month and thanks for reading this newsletter once again!
+
+
+-SECRET
+Here's a bit of music from Part 3 but don't tell anyone
+[Part 3 music tease]

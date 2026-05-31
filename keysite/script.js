@@ -4,7 +4,7 @@ function readData(file) {
     reader.onload = function(event) {
         const arrayBuffer = event.target.result;
         const decoded = new TextDecoder().decode(arrayBuffer)
-        const lastStuff = decoded.slice(-13);
+        const lastStuff = decoded.slice(-12);
         const name = lastStuff.slice(0,3);
         const safe = lastStuff.slice(-9);
         document.getElementById('output').textContent = "NAME: "+name+" SAFE: "+safe;
@@ -16,22 +16,25 @@ function readData(file) {
 async function createKey(){
     const startFile = await loadImageFile("keyimg.jpg")
 
+    const tag = document.getElementById("tagInput").value.toUpperCase();
+    const safe = "000000000"
+
     const bytes = await startFile.bytes();
-    const converted = new TextEncoder().encode("USERNAME AND THEN SAFE")
+    const converted = new TextEncoder().encode(tag+safe)
     const merge = new Uint8Array(bytes.length+converted.length);
     merge.set(bytes);
     merge.set(converted,bytes.length)
 
     const newFile = new Blob([merge.buffer],{type:"image/jpeg"})
-    downloadFile(newFile);
+    downloadFile(tag,newFile);
 }
 
-function downloadFile(imageFile){
+function downloadFile(tag,imageFile){
     const url = URL.createObjectURL(imageFile)
 
     const link = document.createElement('a')
     link.href = url
-    link.download = "ModifiedKey.jpg"
+    link.download = tag+".jpg"
     document.body.appendChild(link)
     link.click()
 

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth Issue</title>
+    <link rel="stylesheet" href="style.css?v=1.5">
+    <script src="animateIfInView.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/star.png">
+
+    <meta content="Issue 5" property="og:title">
+    <meta content="Fifth issue of the monthly wizard fella newletter!!!" property="og:description">
+    <meta content="https://foggydude.dev/wizardfella/assets/logo.png" property="og:image">
+</head>
+
+<body>
+    <a href="index.html"><center><img class="logo" src="assets/logo.png" alt="Wizard fella logo" width="300px"></center></a>
+    <p></p>
+    <section>
+        <p>Welcome back to the Wizard Fella newsletter! This is the fifth(5)(V) issue</p>
+        <p>There's a bunch of new stuff so here we go</p>
+    </section>
+
+    <h1 class="rotatedText2 animate">BIG DREAMS : PART 2</h1>
+    <section class="leftalign">
+        <p>Last month I finished the graybox of this level and this month it is <glow>fully ready!</glow></p>
+    </section>
+    <p><img src="assets/issue5/BigDreamsScreenshot1.png" alt="Screenshot 1 of Big Dreams Part 2. A high angle with a big tree overlooking the level." class="borderimg"></p>
+    <p class="smalltext">Screenshot 1 of Big Dreams Part 2</p>
+    <p><img src="assets/issue5/BigDreamsScreenshot2.png" alt="Screenshot 2 of Big Dreams Part 2. Flute is in focus, jumping through some Rope Rings to reach the tree." class="borderimg"></p>
+    <p class="smalltext">Screenshot 2 of Big Dreams Part 2</p>
+    <p><img src="assets/issue5/BigDreamsScreenshot3.png" alt="Screenshot 3 of Big Dreams Part 2. Flute is in a blue rectangular gravity zone, jumping across some marble blocks." class="borderimg"></p>
+    <p class="smalltext">Screenshot 3 of Big Dreams Part 2</p>
+    <section class="leftalign">
+        <p>
+            The biggest modification from the graybox (besides assets) was that I included some signs that explain the new props that you encounter.
+            Overall I'm really proud of how this level turned out both visually and gameplay wise.
+        </p>
+        <p>
+            I have also begun work on Part 3, however I've decided to not reveal much about it since it's something thats probably better experienced blindly :)
+        </p>
+    </section>
+    <p><img src="assets/issue5/Part3Teaser.png" alt="Teaser of part 3 of Big Dreams. It shows Flute falling from the sky and that they have lost their Star Wand." class="borderimg"></p>
+    <p class="smalltext">Teaser of Big Dreams Part 3</p>
+
+    <h1 class="rotatedText animate">GRABBABLES</h1>
+    <section class="leftalign">
+        <p>
+            Grabbables are a new type of object that you can... grab.
+        </p>
+    </section>
+    <p><img src="assets/issue5/GrabbableGif.gif" alt="A gif of a grabbable in action. Flute picks up a gray ball and then throws it." class="borderimg"></p>
+    <p class="smalltext">Grabbables in action</p>
+    <section class="leftalign">
+        <p>You can also throw them by pressing E, or hold it to throw them further!
+            <br>
+            A little cool technical thing is that I can modify the arm distance for each grabbable, so that arms adjust for bigger/smaller objects.
+        </p>
+    </section>
+    <p><img src="assets/issue5/GrabbableAdjustingGif.gif" alt="A gif that shows how arms adjust to different sizes of grabbabables." class="borderimg"></p>
+    <p class="smalltext">Arms adjusting to grabbables</p>
+
+    <h1 class="rotatedText2 animate">BUTTONS</h1>
+    <section class="leftalign">
+        <p>
+            Buttons are a new prop that could be used for puzzles and stuff.
+        </p>
+    </section>
+    <p><img src="assets/issue5/ButtonsGif.gif" alt="A gif of buttons in action. It shows two buttons which are connected. The left one opens the door on the left, but the right door opens only when the two buttons are pressed together." class="borderimg"></p>
+    <p class="smalltext">Buttons in action</p>
+    <section class="leftalign">
+        <p>
+            As seen above, they can be grouped together to create a circuit.
+            <br>
+            I can also set them to accept only the player or only grabbables or both.
+            <br>
+            They also can be configured into a switch or a timer.
+        </p>
+    </section>
+    <p><img src="assets/issue5/ButtonsGif2.gif" alt="A gif that shows the switch and timer buttons. Stepping on the switch turns the light on or off. Stepping on the timer start a 3 second countdown." class="borderimg"></p>
+    <p class="smalltext">Switch and Timer buttons</p>
+    <section class="leftalign">
+        <p>
+            Since buttons work using Godot's signal system I can pretty much connect them to anything so I'm already thinking of some interesting puzzle ideas.
+        </p>
+    </section>
+    <p></p>
+
+    <h1 class="rotatedText animate">HEALTH STUFF</h1>
+    <section class="leftalign">
+        <p>
+            This is something that I've ignored for a while but there's finally UI to display your health.
+        </p>
+    </section>
+    <p><img src="assets/issue5/HealthGif.gif" alt="A gif that shows the new Heart UI. When the player takes damage, pieces of the heart fly off." class="borderimg"></p>
+    <p class="smalltext">The Heart</p>
+    <section class="leftalign">
+        <p>
+            I've also added a heal item in the form a nice red apple.
+        </p>
+    </section>
+    <p><img src="assets/issue5/AppleGif.gif" alt="A gif that shows the heal apple. Going up to it the player eats it and the missing heart pieces come back." class="borderimg"></p>
+    <p class="smalltext">The Apple</p>
+    <section class="leftalign">
+        <p>
+            I'm still not sure if apples will stay as the general heal item but it's fine for now.
+        </p>
+    </section>
+
+    <h1 class="rotatedText2 animate">MINOR CHANGES</h1>
+
+    <section class="leftalign">
+        <p>
+            <b>Focus Points</b><br><br>
+            Focus points have been modified to have priority so that I can pick where the player should look.<br>Focus points with bigger priority will be activated even if a smaller priority is closer to the player.
+            <br>I'll be using this so that NPC's have bigger priority than something like Grabbables.
+        </p>
+    </section>
+    <p></p>
+    <p><img src="assets/issue5/FocusGif.gif" alt="A gif that shows focus points showcased with my HOG npcs. The yellow hog has the most priority so even though you're close to the normal hog, the player is looking at the yellow hog." class="borderimg"></p>
+    <p class="smalltext">Focus points showcased by the hogs</p>
+
+    <section class="leftalign">
+        <p>
+            <b>Star Checkpoints</b><br><br>
+            Up until now there was no real checkpoints in the game. It just saved your position every 10 seconds.
+            While I did like the auto save it often led to issues and I feel like players were just unsure where they would respawn.
+            <br>I added Star Checkpoints which light up once they are active and save your position.
+        </p>
+    </section>
+    <p></p>
+    <p><img src="assets/issue5/CheckpointGif.gif" alt="A gif that shows how the star checkpoints work." class="borderimg"></p>
+    <p class="smalltext">Star Checkpoints showcase</p>
+
+    <section class="leftalign">
+        <p>
+            <b>Slipping</b><br><br>
+            This month I introduced slipping. The player will slip if the floor below is above 45 degrees.
+            If you're idle this will mean you will just start sliding down but if you're running your speed will keep getting slower and slower until you eventually enter a Slide.
+        </p>
+    </section>
+    <p></p>
+    <p><img src="assets/issue5/SlippingGif.gif" alt="A gif that shows the slipping mechanic." class="borderimg"></p>
+    <p class="smalltext">Slipping</p>
+
+    <p class="skip"></p>
+    <section>
+        <p>This month I finally worked on some things that I've had on the todo list for a while so I'm pretty happy</p>
+        <p>For this next month the priority is to keep working on Part 3 but maybe I could also start working on the next island, Maple Isle</p>
+        <p>Ok that's all for now, see you next month and thanks for reading this newsletter once again!</p>
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://discord.com/invite/keyTzMFJsX"><img src="assets/discord.png" alt="Discord Logo"></a></li>
+                <li><a href="https://www.twitter.com/WizardFellaGame"><img src="assets/twitter.png" alt="Twitter Logo"></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <p class="secret"><p>Here's a bit of music from Part 3 but don't tell anyone</p><audio src="assets/issue5/TutorialPart3Snippet.mp3" controls="true"></audio></p>
+</body>
