@@ -1,0 +1,12 @@
+.username{
+    font-weight: bolder;
+}
+
+.message{
+    color:black;
+}
+
+.channelName{
+    margin-top: -15px;
+    opacity: 0.5;
+}
