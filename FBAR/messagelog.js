@@ -1,4 +1,6 @@
 currentlyLoaded = 0;
+minIndex = 0;
+maxIndex = 0;
 
 const defaultTest = [
     {
@@ -13,32 +15,37 @@ const defaultTest = [
     }
 ]
 
-async function getData(theindex = 0) {
+async function getData(theindex = 0,older=false) {
     console.log(timeConverter(1782653285));
     const response = await fetch("https://general-messages.hrimar321.workers.dev",{
         method: "POST",
-        body: JSON.stringify({thing:"GETMESSAGES",index: theindex})
+        body: JSON.stringify({thing:"GETMESSAGES",minIndex: minIndex,maxIndex: maxIndex})
     });
     const jsonResponse = await response.json();
 
     currentlyLoaded += jsonResponse.length;
-
-    console.log(jsonResponse);
-    console.log(currentlyLoaded);
-    writeMessages(jsonResponse);
+    minIndex = jsonResponse.minIndex;
+    maxIndex = jsonResponse.maxIndex;
+   // console.log(jsonResponse);
+    //console.log(currentlyLoaded);
+    writeMessages(jsonResponse,older);
 }
 
-function writeMessages(messages){
-    //messages = defaultTest;
+function writeMessages(response,older=false){
+    messages = response.results;
 
     const container = document.getElementById("messageContainer");
 
     const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+i.message+'</p><p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>');
-    container.insertAdjacentHTML("beforeend",newElements.join(''))
+    if (!older){
+        container.insertAdjacentHTML("beforeend",newElements.join(''))
+    } else{
+        container.insertAdjacentHTML("beforebegin",newElements.join(''))
+    }
 }
 
-function update(){
-    getData(currentlyLoaded)
+function update(older=false){
+    getData(currentlyLoaded,older)
 }
 
 
