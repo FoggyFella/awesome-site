@@ -29,6 +29,8 @@ async function getData(theindex = 0,older=false) {
    // console.log(jsonResponse);
     //console.log(currentlyLoaded);
     writeMessages(jsonResponse,older);
+    console.log("New min Index is ",minIndex)
+    console.log("New max Index is ",maxIndex)
 }
 
 function writeMessages(response,older=false){
