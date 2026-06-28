@@ -33,11 +33,11 @@ async function getData(theindex = 0,older=false) {
 
     currentlyLoaded += jsonResponse.length;
 
-    if (minIndex == 0 || older){
+    if ((maxIndex==0 && minIndex == 0) || older){
         minIndex = jsonResponse.minIndex;
         console.log("New min Index is ",minIndex)
     }
-    if (maxIndex == 0 || !older){
+    if ((maxIndex==0 && minIndex == 0) || !older){
         maxIndex = jsonResponse.maxIndex;
         console.log("New max Index is ",maxIndex)
     }
