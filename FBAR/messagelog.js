@@ -20,6 +20,7 @@ async function getData(theindex = 0) {
     });
     const jsonResponse = await response.json();
 
+    currentlyLoaded = jsonResponse.length;
     console.log(jsonResponse);
     console.log(currentlyLoaded);
     writeMessages(jsonResponse);
