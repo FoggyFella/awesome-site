@@ -17,20 +17,33 @@ const defaultTest = [
 
 async function getData(theindex = 0,older=false) {
     console.log(timeConverter(1782653285));
+
+    var data = {
+        thing:"GETMESSAGES",
+        minIndex: minIndex,
+        maxIndex: maxIndex,
+        older: older
+    }
+
     const response = await fetch("https://general-messages.hrimar321.workers.dev",{
         method: "POST",
-        body: JSON.stringify({thing:"GETMESSAGES",minIndex: minIndex,maxIndex: maxIndex})
+        body: JSON.stringify(data)
     });
     const jsonResponse = await response.json();
 
     currentlyLoaded += jsonResponse.length;
-    minIndex = jsonResponse.minIndex;
-    maxIndex = jsonResponse.maxIndex;
+
+    if (minIndex == 0 || older){
+        minIndex = jsonResponse.minIndex;
+        console.log("New min Index is ",minIndex)
+    }
+    if (maxIndex == 0 || !older){
+        maxIndex = jsonResponse.maxIndex;
+        console.log("New max Index is ",maxIndex)
+    }
    // console.log(jsonResponse);
     //console.log(currentlyLoaded);
     writeMessages(jsonResponse,older);
-    console.log("New min Index is ",minIndex)
-    console.log("New max Index is ",maxIndex)
 }
 
 function writeMessages(response,older=false){
