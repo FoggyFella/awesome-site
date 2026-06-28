@@ -5,8 +5,9 @@ async function getData(theindex = 0) {
         method: "POST",
         body: JSON.stringify({thing:"GETMESSAGES",index: theindex})
     });
+    const jsonResponse = await response.json();
 
-    currentlyLoaded = length(response);
-    console.log(await response.json());
+    currentlyLoaded = jsonResponse.length;
+    console.log(jsonResponse);
     console.log(currentlyLoaded)
 }
