@@ -1,0 +1,88 @@
+Discord announcement: The sixth newsletter is out now! Make sure to read until the end...
+
+THINGS TO MENTION:
+1 YEAR
+BIG DREAMS PART 3 mostly done
+MAIN MENU
+DIARY STICKERS
+minor:
+change in save to include completed/visited islands
+sleeping state
+walk animation if speed is slow
+ui updates
+
+AND THEN END WITH A DEMO ANNOUNCEMENT!!!
+
+//////
+
+Welcome once again to the Wizard Fella newsletter! We are now on the sixth issue.
+Some exciting stuff this month so let's go, starting with...
+
+1 YEAR
+
+It has now been a little more than a year since I first started working on Wizard Fella Islands.
+The first video I have of it is dated 22/06/2025. Here is that video.
+[FIRST VIDEO]
+I know this is different from what I usually put in the newsletter but it was interesting to me and maybe it's interesting to you too.
+
+Moving onto more standard stuff.
+
+BIG DREAMS : PART 3
+
+I'm still not gonna reveal much about part 3 to not spoil the fun, but I can say its almost done!
+All that's left is some assets, smoothing out animations and maybe another playtest or two.
+
+Here's some screenshots of it.
+[BIG DREAMS PART 3 MARBLE WALL OR SOMETHING]
+[BIG DREAMS PART 3 THINGS ARE GETTING REALLY WEIRD]
+
+MAIN MENU
+
+Believe it or not but up until this month the game didn't have a main menu and now it's mostly done!
+
+[PRESS ANYTHING GIF]
+[SETTINGS GIF]
+[PLAY GIF]
+
+I tried to capture the same vibe that the old Wizard Fella main menu had and I think it turned out even better!
+It's still missing a level select once you load into an existing save and some assets for settings/save select screen.
+Also someone suggested I could change the environment based on the last Island you visited so I might add that at some point.
+
+STICKERS
+
+Stickers are a new type of collectible that you will be able to find through challenges or by buying it using your stars.
+[STICKER COLLECTED IMG]
+Once collected, you can put them on any page in your Diary and they will be saved
+[PLACING STICKERS GIF]
+This is mostly just a cosmetic feature and the game could exist without it... but its kinda cool though.
+
+MINOR CHANGES
+
+Resting State
+There's a new player state. If you stand still for 20 seconds Flute will sit down to rest.
+If you continue staying still for another 30 seconds then Flute will fall asleep!
+[RESTING GIF]
+
+Walking
+If your move speed is slower than regular when running then the animation will be swapped to be a walk.
+[WALKING GIF]
+
+UI Updates
+The UI for the star counter and diary saving have been updated to better match the style of the game.
+I will probably change most of the other UI over the next month aswell.
+[STAR COUNTER GIF]
+[DIARY ICON BEFORE/AFTER IMG]
+
+oh and one more thing...
+
+WIZARD FELLA ISLANDS DEMO (need to make this logo and maybe animate it)
+is coming sometime in July
+
+I'm finally gonna release a public demo for the game at some point in late July. 
+There's still quite a bit to do until then (mostly assets) but I'm confident I can get it done in time.
+Make sure to join the discord to hear about it as soon as it happens!
+
+Thank you for reading this newsletter and another thank you for your support! 
+It's heartwarming knowing that there's people out there who like my weird little game.	
+[FLUTE HEART IMG]
+

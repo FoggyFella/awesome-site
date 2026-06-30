@@ -217,3 +217,22 @@ glow{
     position: absolute;
     left: 2%;
 }
+
+.spinningGlow{
+    position: absolute;
+    height: 200%;
+    max-height: 1000px;
+    z-index: 0;
+    animation: glowrotate 10s infinite linear;
+    overflow: hidden;
+    display: none;
+}
+
+@keyframes glowrotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

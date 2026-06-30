@@ -18,7 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	const observer = new IntersectionObserver(entries => {
 	  entries.forEach(entry => {
 		if (entry.isIntersecting) {
-		  entry.target.classList.add('in-view');
+		  entry.target.classList.add('in-view');;
+		  if (entry.target instanceof HTMLVideoElement){
+			console.log("FUCK")
+			if (entry.target.ended == false){
+				entry.target.play();
+			}
+		  }
 		  return;
 		}
 		entry.target.classList.remove('in-view');
