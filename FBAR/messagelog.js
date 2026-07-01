@@ -36,7 +36,8 @@ async function getData(theindex = 0,older=false) {
         maxIndex: maxIndex,
         older: older
     }
-
+    writeMessages("")
+    
     const response = await fetch("https://general-messages.hrimar321.workers.dev",{
         method: "POST",
         body: JSON.stringify(data)
@@ -59,7 +60,8 @@ async function getData(theindex = 0,older=false) {
 }
 
 function writeMessages(response,older=false){
-    messages = response.results;
+    //messages = response.results;
+    messages = defaultTest;
 
     const container = document.getElementById("messageContainer");
 

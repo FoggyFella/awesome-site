@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+    </style>
     <title>Message Log</title>
-    <script src="messagelog.js?v=2.2"></script>
-    <link rel="stylesheet" href="messagelog.css?v=1.2">
+    <script src="messagelog.js?v=2.3"></script>
+    <link rel="stylesheet" href="messagelog.css?v=1.4">
 </head>
 <body onload="getData()">
+    <div class="helper">
+        <img class="disk" src="assets/cd.png">
+    </div>
     <h1>FBAR MESSAGE LOG</h1>
     <button onclick="update(true)">LOAD OLDER MESSAGES</button>
     <div id="messageContainer"></div>

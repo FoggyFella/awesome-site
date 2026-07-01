@@ -1,9 +1,29 @@
+body{
+    font-family: "Jersey 10", sans-serif;
+    background-color: rgb(4, 28, 3);
+    color: rgb(63, 255, 83);
+}
+
+h1{
+    font-weight: 200;
+    filter: drop-shadow(0 0 10px rgb(146, 219, 126));
+}
+
+button{
+    font-family: "Jersey 10", sans-serif;
+    background-color: rgb(7, 51, 6);
+    color: rgb(63, 255, 83);
+    filter: none;
+}
+
 .username{
     font-weight: bolder;
+    filter: drop-shadow(0 0 10px rgb(146, 219, 126));
+    text-decoration: underline;
 }
 
 .message{
-    color:black;
+    color: rgb(63, 255, 83);
 }
 
 .channelName{
@@ -12,6 +32,33 @@
 }
 
 .attachment{
-    height: 200px;
+    height: auto;
+    width: 200px;
     margin-bottom: 15px;
+}
+
+.disk{
+    height: auto;
+    width: 500px;
+    margin-right: -300px;
+    opacity: 0.2;
+    animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.helper{
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    top: 0px;
+    overflow:hidden;
 }
