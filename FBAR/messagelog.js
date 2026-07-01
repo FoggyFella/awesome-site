@@ -88,7 +88,7 @@ function getAttachmentElement(attachment){
     console.log(theUrl)
 
     const split = fileName.split(".")
-    const fileType = split[split.length]
+    const fileType = split[split.length-1]
 
     console.log(fileType)
 
