@@ -95,7 +95,7 @@ function getAttachmentElement(attachment){
     if (imgTypes.includes(fileType)){
         return "<img class=attachment src='"+theUrl+"'>"
     }else if(videoTypes.includes(fileType)){
-        return "<video class=attachment src='"+theUrl+"'>"
+        return "<video class=attachment controls src='"+theUrl+"'>"
     }else{
         console.log('what the fuck is this one')
     }
