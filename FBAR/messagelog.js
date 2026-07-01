@@ -63,7 +63,7 @@ function writeMessages(response,older=false){
 
     const container = document.getElementById("messageContainer");
 
-    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+i.message+'</p><p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>'+getAttachmentElement(i.attachment));
+    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+i.message+'</p>'+getAttachmentElement(i.attachment)+'<p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>');
     if (!older){
         container.insertAdjacentHTML("beforeend",newElements.join(''))
     } else{
