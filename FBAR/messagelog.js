@@ -78,12 +78,18 @@ function getAttachmentElement(attachment){
     if (attachment.length == 0){
         return ""
     }
+    console.log(attachment)
 
     const fileName = attachment[0];
     const theUrl = attachment[1];
 
+    console.log(fileName)
+    console.log(theUrl)
+
     const split = fileName.split(".")
     const fileType = split[split.length]
+
+    console.log(fileType)
 
     if (imgTypes.includes(fileType)){
         return "<img class=attachment src='"+theUrl+"'>"
