@@ -56,7 +56,7 @@ button{
 
 .helper{
     height: 100%;
-    position: absolute;
+    position: fixed;
     display: inline-block;
     right: 0px;
     top: 0px;
