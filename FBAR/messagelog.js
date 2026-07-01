@@ -83,12 +83,12 @@ function getAttachmentElement(attachment){
     const theUrl = attachment[1];
 
     const split = fileName.split(".")
-    const fileType = split[split.length-1]
+    const fileType = split[split.length]
 
     if (imgTypes.includes(fileType)){
-        console.log('ok this one is an image')
+        return "<img class=attachment src='"+theUrl+"'>"
     }else if(videoTypes.includes(fileType)){
-        console.log('ok this one is a video')
+        return "<video class=attachment src='"+theUrl+"'>"
     }else{
         console.log('what the fuck is this one')
     }
