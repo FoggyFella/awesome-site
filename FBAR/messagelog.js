@@ -67,7 +67,7 @@ function writeMessages(response,older=false){
     if (!older){
         container.insertAdjacentHTML("beforeend",newElements.join(''))
     } else{
-        container.insertAdjacentHTML("beforebegin",newElements.join(''))
+        container.insertAdjacentHTML("afterbegin",newElements.join(''))
     }
 }
 
