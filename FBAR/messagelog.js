@@ -16,17 +16,17 @@ const defaultTest = [
 ]
 
 const imgTypes = [
-    ".jpg",
-    ".png",
-    ".jpeg",
-    ".webp",
-    ".gif"
+    "jpg",
+    "png",
+    "jpeg",
+    "webp",
+    "gif"
 ]
 
 const videoTypes = [
-    ".mp4",
-    ".mkv",
-    ".avi"
+    "mp4",
+    "mkv",
+    "avi"
 ]
 
 async function getData(theindex = 0,older=false) {
