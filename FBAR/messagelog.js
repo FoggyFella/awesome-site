@@ -75,13 +75,14 @@ function getAttachmentElement(attachment){
     if (attachment == null){
         return ""
     }
-    if (attachment.length == 0){
+    const pasrsedAttachment = JSON.parse(attachment);
+    if (pasrsedAttachment.length == 0){
         return ""
     }
-    console.log(attachment)
+    console.log(pasrsedAttachment)
 
-    const fileName = attachment[0];
-    const theUrl = attachment[1];
+    const fileName = pasrsedAttachment[0];
+    const theUrl = pasrsedAttachment[1];
 
     console.log(fileName)
     console.log(theUrl)
