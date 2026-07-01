@@ -15,9 +15,21 @@ const defaultTest = [
     }
 ]
 
-async function getData(theindex = 0,older=false) {
-    console.log(timeConverter(1782653285));
+const imgTypes = [
+    ".jpg",
+    ".png",
+    ".jpeg",
+    ".webp",
+    ".gif"
+]
 
+const videoTypes = [
+    ".mp4",
+    ".mkv",
+    ".avi"
+]
+
+async function getData(theindex = 0,older=false) {
     var data = {
         thing:"GETMESSAGES",
         minIndex: minIndex,
@@ -51,12 +63,30 @@ function writeMessages(response,older=false){
 
     const container = document.getElementById("messageContainer");
 
-    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+i.message+'</p><p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>');
+    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+i.message+'</p><p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>'+getAttachmentElement(i.attachment));
     if (!older){
         container.insertAdjacentHTML("beforeend",newElements.join(''))
     } else{
         container.insertAdjacentHTML("beforebegin",newElements.join(''))
     }
+}
+
+function getAttachmentElement(attachment){
+    const fileName = attachment[0];
+    const theUrl = attachment[1];
+
+    const split = fileName.split(".")
+    const fileType = split[split.length-1]
+
+    if (imgTypes.includes(fileType)){
+        console.log('ok this one is an image')
+    }else if(videoTypes.includes(fileType)){
+        console.log('ok this one is a video')
+    }else{
+        console.log('what the fuck is this one')
+    }
+
+    return ""
 }
 
 function update(older=false){
