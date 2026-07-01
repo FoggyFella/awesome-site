@@ -72,6 +72,13 @@ function writeMessages(response,older=false){
 }
 
 function getAttachmentElement(attachment){
+    if (attachment == null){
+        return ""
+    }
+    if (attachment.length == 0){
+        return ""
+    }
+
     const fileName = attachment[0];
     const theUrl = attachment[1];
 
