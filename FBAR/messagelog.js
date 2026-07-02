@@ -119,7 +119,7 @@ function update(older=false){
 
 function formatMessage(message){
     Object.keys(translations).forEach(keyword => {
-        message.replace(keyword,translations[keyword]);
+        message = message.replace(keyword,translations[keyword]);
     });
 
     return message;
