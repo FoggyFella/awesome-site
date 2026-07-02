@@ -29,6 +29,15 @@ const videoTypes = [
     "avi"
 ]
 
+const translations = {
+    "grate":"great",
+    "feir":"fire",
+    "siht":"shit",
+    "heoll":"hello",
+    "yuah":"yeah",
+    "mayabe":"maybe"
+}
+
 async function getData(theindex = 0,older=false) {
     var data = {
         thing:"GETMESSAGES",
@@ -36,6 +45,7 @@ async function getData(theindex = 0,older=false) {
         maxIndex: maxIndex,
         older: older
     }
+    //formatMessage("");
     
     const response = await fetch("https://general-messages.hrimar321.workers.dev",{
         method: "POST",
@@ -63,7 +73,7 @@ function writeMessages(response,older=false){
 
     const container = document.getElementById("messageContainer");
 
-    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+i.message+'</p>'+getAttachmentElement(i.attachment)+'<p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>');
+    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+formatMessage(i.message)+'</p>'+getAttachmentElement(i.attachment)+'<p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>');
     if (!older){
         container.insertAdjacentHTML("beforeend",newElements.join(''))
     } else{
@@ -105,6 +115,14 @@ function getAttachmentElement(attachment){
 
 function update(older=false){
     getData(currentlyLoaded,older)
+}
+
+function formatMessage(message){
+    Object.keys(translations).forEach(keyword => {
+        message.replace(keyword,translations[keyword]);
+    });
+
+    return message;
 }
 
 
