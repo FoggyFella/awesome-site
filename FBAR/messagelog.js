@@ -45,7 +45,6 @@ async function getData(theindex = 0,older=false) {
         maxIndex: maxIndex,
         older: older
     }
-    //formatMessage("");
     
     const response = await fetch("https://general-messages.hrimar321.workers.dev",{
         method: "POST",
@@ -72,8 +71,9 @@ function writeMessages(response,older=false){
     messages = response.results;
 
     const container = document.getElementById("messageContainer");
+    const formattedMessage = formatMessage(i.message);
 
-    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+formatMessage(i.message)+'</p>'+getAttachmentElement(i.attachment)+'<p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>');
+    const newElements = messages.map((i)=>'<p class=username>'+i.username+':</p><p class=message>'+formattedMessage+'</p>'+getAttachmentElement(i.attachment)+'<p class=channelName>in '+i.channelname+' at '+timeConverter(i.timestamp)+'</p>');
     if (!older){
         container.insertAdjacentHTML("beforeend",newElements.join(''))
     } else{
@@ -121,7 +121,7 @@ function formatMessage(message){
     Object.keys(translations).forEach(keyword => {
         message = message.replace(keyword,translations[keyword]);
     });
-
+    console.log(message);
     return message;
 }
 
