@@ -212,6 +212,15 @@ glow{
     }
 }
 
+@keyframes loopAnim{
+    0%{
+        transform: translate(0xp,0px);
+    }
+    100%{
+        transform: translate(300px,0px);
+    }
+}
+
 .winkImg{
     width: 300px;
     position: absolute;
