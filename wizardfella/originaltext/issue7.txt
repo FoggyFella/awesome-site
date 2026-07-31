@@ -1,0 +1,72 @@
+THINGS TO MENTION:
+
+MAPLE ISLE (FLUTES ROOM)
+MAIN MENU ASSETS AND LEVEL SELECT
+PRIMITIVE CUSTOMIZATION
+??? LEVEL
+level data resource
+opening logos
+cover from bread
+
+
+///
+
+It's that time again for a monthly newsletter!
+This month I released the demo and if you've played it you would've seen (almost) everything that I will showcase here.
+
+---MAPLE ISLE---
+Maple Isle is the second island in the game. A home for Flute and a few other Fellas who you will get to know.
+This month I made two important locations for this island.
+
+[FLUTE ROOM IMG]
+The first one is Flute's Room. It's where you will start the first part of this island.
+I still want to add more to it and also have to make the rest of Flute's house.
+
+[MAPLE ISLE IMG]
+I've made a mesh for the Maple Isle and it's assets and have been trying to figure out the gameplay for the parts.
+Just like the room, it might get changed later but is in a pretty good place now.
+
+---MAIN MENU---
+The main menu was updated with a few more assets as promised in the last newsletter.
+[MAIN MENU ISLANDS IMG]
+[MAIN MENU SETTINGS IMG]
+[MAIN MENU SAVE SELECT IMG]
+There is also now a level select that lets you load into levels that you have visited.
+Logically it works but it will look WAY WAY WAY different once I get to polishing it.
+
+---CUSTOMIZATION---
+There is now support for primitive customization of your character.
+[EXAMPLE CUSTOMIZATION IMG (ALT COLORS)]
+[EXAMPLE CUSTOMIZATION 2 IMG (WIZARD GUY)] 
+Color of clothes, hat and scarf can be changed aswell as hiding the scarf and hat.
+There isn't a way to change the appearance in game yet but I used this for some scenes in the demo :)
+In the future this will be expanded with the ability to wear different hats and scarfs and etc.
+
+--???---
+Hmm...
+[??? GIF DOOR LOCKED]
+[??? IMG 2]
+You'll just have to find this yourself :)
+
+---MINOR CHANGES---
+
+Level Data
+So up until now the data for levels was just thrown around a few places. And if I wanted to, for example, change the name of a level it'd be quite a long ordeal.
+I have now moved level data like level name, descriptions and parts to it's own resource. This means if I just change the values in this file it will change it everywhere.
+[LEVEL DATA AS SEEN IN GODOT EDITOR IMG]
+This doesn't affect the game in any way but makes working on it easier
+
+Opening Logos
+I've added a quick opening logo scene when you boot up the game.
+[OPENING LOGOS GIF]
+It shows the Godot Engine's logo as well as mine and can be skipped if you press Enter.
+
+Demo Cover
+Check out this awesome cover art for the demo that was made by BreadFiend
+[DEMO COVER IMG]
+I'm really really happy with how it turned out. Check out more of Bread's work here(LINK TO TWITTER)
+
+---CONCLUSION---
+That's it for this month's newsletter. It's been really exciting to finally get the demo out and all the feedback on it has really motivated me to keep going!
+I might be a bit busy next month but I'll still try to work on the game. The main focus for now is Maple Isle.
+I'll see you next time, bye for now!!!
