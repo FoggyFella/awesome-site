@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patrick star got his head exploded</title>
+    
+    <style>
+        body{
+            text-align: center;
+        }
+
+        video{
+            min-width: 60%;
+            min-height: 60%;
+            transition: all 10s;
+        }
+
+        .fadeOut{
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #fadeinHeading{
+            opacity: 0;
+            transition: all 15s ease-in;
+        }
+    </style>
+    <script src="patrick.js"></script>
+</head>
+<body onload="attachstuff()">
+    <h1>patrick star got his head exploded</h1>
+    <video id="thevideo" src="assets/patrick star got his head exploded.webm" controls></video>
+    <h1 id="fadeinHeading">damn...</h1>
+</body>
+</html>
