@@ -106,6 +106,7 @@ async function loadStuff(){
             }
     });
     
-    console.log(results);
+    const stuff = await response.json();
+    console.log(stuff);
 }
 
