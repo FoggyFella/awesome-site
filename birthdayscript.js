@@ -107,6 +107,16 @@ async function loadStuff(){
     });
     
     const stuff = await results.json();
-    console.log(stuff);
+    
+    for (let i = 0; i < stuff.length; i++){
+        const theThing = stuff[i];
+        const id = theThing.theid;
+        const newText = theThing.thetext;
+
+        const idElement = document.getElementById(id);
+        if (idElement != null){
+            changeTextContents(idElement.parentElement,newText);
+        }
+    }
 }
 
