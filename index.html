@@ -19,9 +19,11 @@
     <title>FoggyDude Home!</title>
     <link rel="stylesheet" href="main.css?v=2.1">
     <link rel="stylesheet" href="splitting/splitting.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="splitting/splitting.js"></script>
+    <script src="birthdayscript.js"></script>
 </head>
-<body>
+<body onload="testIndex()">
     <div id="tile-container">
         <div id="tile-pattern"></div>
         <div id="gradient-overlay"></div>
@@ -43,7 +45,7 @@
         <p class="rightAlign">Check out my <a href="socials.html">contacts</a> if you wanna!</p>
         <p class="rightAlign">And sign my <a href="submit.html">guestbook</a>!</p>
 
-        <h2 class="anotherOne">< My Games ></h2>
+        <h2 class="anotherOne" id="testingSHIT">< My Games ></h2>
         <p>I first started making games with Python and then moved to Godot Engine. Ever since that moment I've been mainly using Godot. Game development lets me make my ideas become playable and I love it.</p>
         <p class="rightAlign">All my games are free any support is highly appreciated! My projects are mostly solo and I enjoy sharing them with the world.</p>
         <b><center><p class="wavyText">Here is some of the games that I made: </p></center></b>

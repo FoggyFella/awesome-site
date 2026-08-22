@@ -20,8 +20,8 @@ function drawDot(ev){
     //var ctx = canvas.getContext("2d");
 
     if (mousedown){
-        ctx.fillRect(ev.pageX,ev.pageY,10,10);
-        drawArray.push(ev.pageX,ev.pageY);
+        ctx.fillRect(ev.offsetX,ev.offsetY,10,10);
+        drawArray.push(ev.offsetX,ev.offsetY);
         console.log(drawArray);
     }
 }
