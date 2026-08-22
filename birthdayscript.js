@@ -14,7 +14,8 @@ function testIndex(){
     document.getElementById("mainstuff").addEventListener('mouseover',(event)=>testsit(event));
     document.addEventListener("mouseup",mouseClicked)
     document.addEventListener("keydown",(event)=>KeyInput(event));
-    console.log(window.location.pathname);
+
+    loadStuff();
 }
 
 let hoveredElement = null;
@@ -90,5 +91,21 @@ async function submitStuff(){
           "Content-type": "application/json; charset=UTF-8"
         }
     });
+}
+
+async function loadStuff(){
+    const results = 
+        await fetch(theURL, {
+            method: "POST",
+            body: JSON.stringify({
+            thething: "GETCHANGE",
+            username: window.location.pathname,
+            }),
+            headers: {
+            "Content-type": "application/json; charset=UTF-8"
+            }
+    });
+    
+    console.log(results);
 }
 
