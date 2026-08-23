@@ -52,7 +52,7 @@ function KeyInput(event){
     if (focusedElement != null){
         //console.log(focusedElement.textContent);
         //if (event.keyCode)
-        if (event.key != 'Backspace' && event.location == 0x00 && event.key != "Enter"){
+        if (event.key != 'Backspace' && event.location == 0x00 && event.key != "Enter" && event.key != "Escape"){
             //changeTextContents(focusedElement,focusedElement.textContent+event.key)
             changeTextContents(focusedElement,getTextContents(focusedElement)+event.key);
         } else if (event.key == 'Backspace'){
@@ -60,6 +60,14 @@ function KeyInput(event){
             changeTextContents(focusedElement,getTextContents(focusedElement).substring(0,getTextContents(focusedElement).length-1))
         } else if (event.key == "Enter"){
             submitStuff();
+        } else if (event.key == "Escape"){
+            if (focusedElement != null){
+                focusedElement.classList.remove("editing");
+            }
+
+            warningSign.style.opacity = 0;
+            focusedElement = null;
+            hoveredElement = null;
         }
     }
 }
