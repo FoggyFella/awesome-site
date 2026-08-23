@@ -37,6 +37,7 @@ function mouseClicked(){
         //console.log(hoveredElement.localName);
         if (focusedElement != null){
             focusedElement.classList.remove("editing");
+            submitStuff();
         }
         focusedElement = hoveredElement;
         focusedElement.classList.add("editing");
