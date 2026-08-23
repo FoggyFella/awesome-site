@@ -1,6 +1,9 @@
 const theURL = "https://test-workflow.hrimar321.workers.dev";
+let warningSign = null;
 
 function testIndex(){
+    warningSign = document.getElementById("warningtext");
+    warningSign.style.opacity = 0;
     const allElements  = $("*");
 
     for (let i = 0; i<allElements.length; i++){
@@ -34,10 +37,11 @@ let focusedElement = null;
 function mouseClicked(){
     console.log("MOUSE CLICK!")
     if (hoveredElement != null){
+        warningSign.style.opacity = 1;
         //console.log(hoveredElement.localName);
-        if (focusedElement != null){
+        if (focusedElement != null && focusedElement != hoveredElement){
             focusedElement.classList.remove("editing");
-            submitStuff();
+            //submitStuff();
         }
         focusedElement = hoveredElement;
         focusedElement.classList.add("editing");
@@ -84,6 +88,7 @@ async function submitStuff(){
     focusedElement.classList.remove("editing");
     focusedElement = null;
     hoveredElement = null;
+    warningSign.style.opacity = 0;
 
     await fetch(theURL, {
         method: "POST",
