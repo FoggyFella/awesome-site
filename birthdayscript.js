@@ -35,7 +35,11 @@ function mouseClicked(){
     console.log("MOUSE CLICK!")
     if (hoveredElement != null){
         //console.log(hoveredElement.localName);
+        if (focusedElement != null){
+            focusedElement.classList.remove("editing");
+        }
         focusedElement = hoveredElement;
+        focusedElement.classList.add("editing");
     }
 }
 
@@ -44,11 +48,11 @@ function KeyInput(event){
         //console.log(focusedElement.textContent);
         //if (event.keyCode)
         if (event.key != 'Backspace' && event.location == 0x00 && event.key != "Enter"){
-            changeTextContents(focusedElement,focusedElement.textContent+event.key)
-            //changeTextContents(focusedElement,getTextContents(focusedElement)+event.key);
+            //changeTextContents(focusedElement,focusedElement.textContent+event.key)
+            changeTextContents(focusedElement,getTextContents(focusedElement)+event.key);
         } else if (event.key == 'Backspace'){
-            changeTextContents(focusedElement,focusedElement.textContent.substring(0,focusedElement.textContent.length-1))
-            //focusedElement.textContent = focusedElement.textContent.substring(0,focusedElement.textContent.length-1);
+            //changeTextContents(focusedElement,focusedElement.textContent.substring(0,focusedElement.textContent.length-1))
+            changeTextContents(focusedElement,getTextContents(focusedElement).substring(0,getTextContents(focusedElement).length-1))
         } else if (event.key == "Enter"){
             submitStuff();
         }
@@ -56,15 +60,15 @@ function KeyInput(event){
 }
 
 function getTextContents(element){
-    element.childNodes.forEach(node => {
-        if (node.nodeType == Node.TEXT_NODE) {
-            return node.nodeValue;
-        }
-    })
+    return element.childNodes[0].nodeValue;
 }
 
 function changeTextContents(element, newText) {
     let done = false;
+    element.classList.add("edited");
+    element.childNodes[0].nodeValue = newText;
+
+    return
     element.childNodes.forEach(node => {
         if (node.nodeType == Node.TEXT_NODE && done == false) {
             node.nodeValue = newText
@@ -76,6 +80,7 @@ function changeTextContents(element, newText) {
 async function submitStuff(){
     const theID = focusedElement.querySelector("fucker").id;
     const theNewText = focusedElement.textContent;
+    focusedElement.classList.remove("editing");
     focusedElement = null;
     hoveredElement = null;
 
@@ -115,7 +120,8 @@ async function loadStuff(){
 
         const idElement = document.getElementById(id);
         if (idElement != null){
-            changeTextContents(idElement.parentElement,newText);
+            const theRealElement = idElement.parentElement;
+            changeTextContents(theRealElement,newText);
         }
     }
 }

@@ -1,0 +1,36 @@
+.edited em{
+    display: none;
+}
+
+.edited .mini{
+    display: none;
+}
+
+.edited span{
+    display: none;
+}
+
+.edited a{
+    display: none;
+}
+
+.edited b{
+    display: none;
+}
+
+.editing{
+    background-color: rgba(111, 0, 255, 0.31);
+    animation: bganim 2s ease-in-out infinite;
+}
+
+@keyframes bganim {
+    0%{
+        background-color: rgba(111, 0, 255, 0.31);
+    }
+    50%{
+        background-color: rgba(111, 0, 255, 0);
+    }
+    100%{
+        background-color: rgba(111, 0, 255, 0.31);
+    }
+}
