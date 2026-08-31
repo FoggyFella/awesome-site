@@ -1,0 +1,66 @@
+THINGS TO MENTION:
+
+MAPLE ISLE (FLUTES HOUSE)
+RUBBER BUGS
+BALLOONS
+LEVEL SELECT PROTOTYPE
+
+Minor:
+Ledge Grab Fixes
+Screen Fog under clouds
+
+Secret:
+Photo of a page
+
+///
+
+I'm back yet again for newsletter number 8! 
+This month I was very busy with certain things however I still made some new stuff that I can show. Let's get into it!!
+
+---MAPLE ISLE---
+This month I've been slowly working away at Flute's house which is on Maple Isle and it's where the story of the demo left off.
+[KITCHEN AND FLOWER IMG]
+There's still a lot of assets that need to be made for it, however the layout will (probably) stay like this
+This image above is of the kitchen and the undecorated sewing room which are downstairs.
+[ATTIC IMG]
+This is the attic where later you will be able to find a telescope to gaze at the stars
+
+---RUBBER BUGS---
+Rubber Bugs are little bugs that you can bounce on.
+[BOUNCING ON RUGS GIF]
+Rugs (my awesome shortened version) also naturally walk around a set path.
+[RUGS WALKING AROUND GIF]
+You can also attack the Rugs and they will flip over for a few seconds.
+[RUGS FLIPPED IMG]
+
+---LEVEL SELECT---
+As said in the previous newsletter, the current level select was a placeholder and right now I'm working on the real level select.
+[LEVEL SELECT PROTO GIF]
+It's not fully functional yet but hopefully you see my vision with this prototype of it.
+
+---BALLOONS---
+Balloons are new props that you can use to reach some high spots
+[BALLOON GIF]
+Flute can grab the balloon and then move around or jump off of it any time. 
+Originally they were supposed to act pretty much like a bounce pad but I think this is more interesting.
+
+---MINOR CHANGES---
+
+Ledge Grab
+I've modified some of the stuff related to the ledge grab to make it more consistent and less buggy.
+One of the examples is that previously there were cases where you could grab onto any point of an angled box (which is not how it's supposed to work).
+
+Cloud Fog
+Cloud Fog is an effect that I've been experimenting with to make sure you can't see the void below the clouds.
+[NO CLOUD FOG GIF]
+[CLOUD FOG GIF]
+As you can see, when compared the cloud fog hides the fact that there is nothing below the clouds. It's still something I will keep tweaking since it doesn't work properly all of the time.
+
+---CONCLUSION---
+And that's it for now! Maple Isle remains as the main focus for me right now. 
+Hopefully I can finish up the intro/house section of it by next month so I can move onto the objectives (some fun stuff planned :D)
+Until next time, bye bye!!!
+
+---SECRET---
+
+
