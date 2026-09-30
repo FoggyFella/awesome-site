@@ -1,0 +1,54 @@
+THINGS TO MENTION:
+
+THE PARENTS
+MAPLE ISLE (FLUTES HOUSE)
+LEVEL SELECT 
+
+MINOR CHANGES:
+
+Flutes Voice Changed
+Attack Knockback (Attack rework maybe coming later?)
+
+
+Secret:
+Level select real theme
+
+///
+The newsletter is back one again for the 9th issue! This one is actually pretty short but should still be interesting.
+
+
+---THE PARENTS---
+The biggest update of this month is the two new important story characters, Flute's parents.
+
+[DAD PICTURE]
+Flute's father is a hard-working miner. He works to gather valuable resources from islands surrounding Maple Isle. 
+Although he may look pretty brutal, he's actually really sweet and funny if you know him. He's working most of the time so Flute doesn't see him much apart from breakfast and dinner, for now...
+
+[MOM PICTURE]
+Flute's mother is a seamstress and hat maker. Everything that Flute's family wears is made by Flute's mother. She often gets orders from the people of Maple Isle and sometimes even surrounding islands.
+Her newest work is a top hat for the mayor of Maple Isle, but someone has to deliver it...
+
+---MAPLE ISLE---
+Once again I worked on the interior of Flute's house this month (last time I put this in the newsletter probably) and updated the kitchen and Mom's studio.
+[KITCHEN WITH THE PARENTS]
+[MOM'S STUDIO]
+
+---LEVEL SELECT---
+Level Select is now fully functional and I've decided to hide the names of islands you haven't yet visited.
+[LEVEL SELECT NAVIGATING]
+Once you go into an island you can select each part and it will change depending whether you've finished it or not.
+[BIG DREAMS DIORAMA]
+
+---MINOR CHANGES---
+
+-Flute's New Voice
+Flute has a new voice because I thought the new version sounded nicer when combined with the voices of Flute's parents.
+[FLUTE OLD VOICE VID]
+[FLUTE NEW VOICE VID]
+
+-Attack Knockback
+Flute now has attack knockback when they get damaged. Also I've been experimenting with making Flute's attacks slightly move flute backward or forward and I'm considering redoing the combat slightly.
+
+Thank you for reading the newsletter once again! I know this one was short but I promise next month is gonna be bigger.
+Anyways I'll see you next time on the 31st of October (spoOky....)
+
